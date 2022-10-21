@@ -1,0 +1,23 @@
+Team discussion 10.20.22: 
+For the project we will be creating a webpage that will display information or stats based on time of day per hospital. 
+Given the time constraint the focus will be:
+1.	Predictive Time per hospital
+2.	Cost per ambulance unit on the wall
+Extras as time allows: 
+1.	Patients Primary Impression (Does it have an impact? is there a marked difference in wait by Impression)
+2.	Zip Codes- Does the originating area influence the estimated wait time of an individual? 
+3.	Agencies- Does the ambulance company that delivers you to the hospital make a difference on how fast a patient is seen? 
+A copy of the data was made available to the team on 10.19.22. Since made available Bethany has begun cleaning the data, Steven has begun reviewing the data with Machine learning. I’ve sent examples of projects to the team for review. 
+
+Following the discussion: 
+1.	Bethany is working on git hub branching 
+2.	Dorthy and Bethany are working on Sorting Primary Impressions to reduce them o the State provided 68 options. 
+3.	Stephen and Matt are looking at what can be accomplished with Machine Learning. 
+4.	Bethany selected a template for discussion and team agreed that it fits what we want to accomplish. 
+
+Segment # 1
+Suggested team assignments per Rubric (Awaiting team discussion)  
+•	Presentation - Dorthy
+•	Git Hub - Bethany
+•	Machine Learning - Steven
+•	Database - Matt

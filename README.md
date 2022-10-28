@@ -145,6 +145,8 @@ After running the models listed above, the Balanced Random Forest model seemed t
 After reviewing the results and re-examining the data, it was noticed that the previous Status buckets columns were too strongly related and may be skewing the results. Thus, we updated the Status buckets and refined the buckets, to more specific time buckets, in hopes that would take care of possible overfitting.
 In an effort to refine the results, we dropped the APOT (wait time) column which reduced the accuracy but in theory gave a truer value. 
 
+[Target Column Values](https://github.com/Myorignl/Final_Project7/blob/Bethany/input_labels_tabledata.png)
+
 The previous Status buckets used: 
 
 * Benchmark

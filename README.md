@@ -47,6 +47,7 @@ Time frame:
 1. Bethany
    * Github Contributer/Collaborator: created at least one branch for each team member, merge/pull requests, 4 commits from each team member verified
    * Data Cleaning: Pandas and Jupyter notebook 
+   [Data Cleaning Notebook](https://github.com/Myorignl/Final_Project7/blob/Bethany/datacleaning_jupyter/Clean__ems_data.ipynb)
    * README.md writeup
 
 2. Dorthy 
@@ -56,12 +57,18 @@ Time frame:
 3. Matt 
    * PostgreSQL setup and database storage
    * Preparation of dataset tables: 
+   [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
+   [April to June 2017-2021 EMS Table 2](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/AprJun_20172021_EMS_table.csv)
+   [July to September 2017-2021 EMS Table 3](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JulSep_20172021_EMS_table.csv)
+   [October to December 2017-2021 EMS Table 4](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/OctDec_20172021_EMS_table.csv)
 
 4. Steven 
    * Machine Learning Models: SkiKit-Learn
    * Data Cleaning for ML models
 
 ### Hosting Platform
+
+The hosting platform will be utilized on Github.
 
 ### Database 
 

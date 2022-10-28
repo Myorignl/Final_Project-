@@ -2,19 +2,21 @@
 
 ## Presentation  
 
-### Overview 
+#### Overview 
 
 Ambulance Patient Offload Times for Sacramento County Hospitals. Develop a regressive model that can provide predictive data for each hospital.  Identify what patterns exist within the data through machine learning. The report will assist Hospital staff in addressing staffing issues and hospital throughput as well as assist ambulance companies in better planning unit allocation. 
 
-### Description 
+ * Data Set obtained from Sacramaento County EMS agency 
+
+#### Description 
 
 Extended Ambulance Patient Offload Times create idle ambulances that could be needed for emergencies on the road but are instead waiting for their patient to be placed in an ED bed. When an ambulance crew is awaiting placement, they are unable to respond to another emergency call. There are numbered ambulance resources for Sacramento County and lack of unit availability due to APOT translates into longer EMS responses to the detriment of the community.
 
-### Audience
+#### Audience
 
 * Hospital staff and Ambulance Drivers. 
 
-### Dataset Questions  
+#### Dataset Questions  
 
 1. Which impressions has the longest/shortest APOTs? (Overall and by Hospital codes)
 2.	Compare impressions to zip codes. Which zip codes have the highest/lowest rates of which impressions? 
@@ -22,7 +24,7 @@ Extended Ambulance Patient Offload Times create idle ambulances that could be ne
 4.	Wait times per hospital by date/time 
 5.	Do any patterns arise from the data? 
 
-### Measuring metrics for ambulance patient offload times  
+#### Measuring metrics for ambulance patient offload times  
 
 Time frame: 
 * (<=20.49)
@@ -34,7 +36,7 @@ Time frame:
 90th Percentile of APOT per Hour
 * Create array per hour by hospital and generate a 90th percentile
 
-## Technologies Used 
+#### Technologies Used 
 
 * Jupyter Notebook & Pandas 
 * Visual Studio Code
@@ -42,59 +44,18 @@ Time frame:
 * SciKit-Learn Libraries
 * Undetermined Which to Use: Tableau or User Interface 
 
-## Team Roles 
+## Github
+- Branches created in thw repository for each individual team member 
+- Team Member (Bethany) handles merges into main branch
+- Exchange of files ie. new csv files created via SQL are exchanged via individual branch. 
+- Each team mmber is responsible to submit required commits into their individual branch prior to due date/time
 
-1. Bethany
-   * Github Contributer/Collaborator: created at least one branch for each team member, merge/pull requests, 4 commits from each team member verified
-   * Data Cleaning: Pandas and Jupyter notebook 
-   [Data Cleaning Notebook](https://github.com/Myorignl/Final_Project7/blob/Bethany/datacleaning_jupyter/Clean__ems_data.ipynb)
-   * README.md writeup
-
-2. Dorthy 
-   * Data Extraction & Data Cleaning 
-   * Presentation & Planning of project
-
-3. Matt 
-   * PostgreSQL setup and database storage
-   * Preparation of dataset tables: 
-
-   [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
-
-   [April to June 2017-2021 EMS Table 2](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/AprJun_20172021_EMS_table.csv)
-
-   [July to September 2017-2021 EMS Table 3](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JulSep_20172021_EMS_table.csv)
-
-   [October to December 2017-2021 EMS Table 4](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/OctDec_20172021_EMS_table.csv)
-
-4. Steven 
+## Machine Learning Model 
    * Machine Learning Models: SkiKit-Learn
    * Data Cleaning for ML models
+   * The hosting platform will be utilized on Github.
 
-### Hosting Platform
-
-The hosting platform will be utilized on Github.
-
-### Database 
-
-Below is an example of our database used for querying our data.
-
-![EMS_table_example](https://user-images.githubusercontent.com/86776606/198105316-4fd46a12-c9d6-4c02-80e7-fb90a5cb1e8d.png)
-
-This is the sql query used to create the table.
-
-![SQL Query](https://user-images.githubusercontent.com/86776606/198105999-4e12c30b-a92c-4a79-8b48-81a07161938b.png)
-
-Queries used to filter the data from 2017-2021 but only specific month ranges.
-
-[Filtered SQL Queries](https://user-images.githubusercontent.com/86776606/198159708-e7ea6b22-59a2-4785-b402-61366ac2193e.png)
-
-Queries used to filter the data from 2017-2021 but only specific month ranges for bethany_data, removing certain columns to test for user interface in javascript/html portion.
-
-[Bethany Filtered Queries](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
-
-### Machine Learning 
-
-## Pre-Processing, Data Cleaning, Errors and Solutions
+#### Pre-Processing, Data Cleaning, Errors and Solutions
 
 Below is a sample of some of the errors that were incurred when cleaning our data:
 
@@ -114,11 +75,11 @@ The error above revealed that we had a column of data that was a mix of numerica
 
 The error above revealed a limitation which is addressed below. The dataset was too large to work with and we are seeking an alternative solution. 
 
-## Limitations
+#### Limitations
 
 Our dataset included over 500k rows of data which ended up being more than the machine learning models code run on my computer. In order to continue working with the data a smaller sample of only 1000 rows was used with plans to run a larger set.
 
-## Models and Strategies 
+#### Models and Strategies 
 
 Models and Strategies used include the following:
 
@@ -130,7 +91,7 @@ Models and Strategies used include the following:
 - Undersampling
 - Combination (Over and Under) Sampling
 
-## Initial Results
+#### *Initial Results8
 
 The initial results yielded a high accuracy score =0.988, as shown below:
 
@@ -140,7 +101,7 @@ After running the models listed above, the Balanced Random Forest model seemed t
 
 [Results_importances_initial](https://user-images.githubusercontent.com/106631875/198458636-c720af18-6a64-4216-85d5-93bd58d7e2b8.png)
 
-## Refined Results
+#### *Refined Results*
 
 After reviewing the results and re-examining the data, it was noticed that the previous Status buckets columns were too strongly related and may be skewing the results. Thus, we updated the Status buckets and refined the buckets, to more specific time buckets, in hopes that would take care of possible overfitting.
 In an effort to refine the results, we dropped the APOT (wait time) column which reduced the accuracy but in theory gave a truer value. 
@@ -169,16 +130,60 @@ The updated Status buckets were changed to:
 Looking closer at the top 5 importances, there seemed to be a strong relationsip with the APOT (wait time). On closure examination, the top 5 importances seemed to all be related. After further pre-processing our data, the model was run again with the index (renamed record), hospital code, lat and long dropped. 
 
 
-## Preliminary Machine Learning Conclusions
+### Preliminary Machine Learning Conclusions
 
 There are no firm conclusions at this point except that more research needs to be done. However, there does seem to be a strong relationship between the hospital and APOT (wait time). Beyond the machine learning models that were run, a linear regression model with a dependent variable of time of day and the independent variable of APOT (wait time) revealed a strong relationship to the time of day and duration of the wait time.
 
-### Dashboard 
-
-### Issues/Solutions 
 
 
+## Database 
+
+The database platform chosen for this project is SQL. The team member handling the SQL data base has completed set up and storage of data. Team member is handling requests for data and creating subsets/ tables as required.  
+
+* Datasets created to date: 
+
+   [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
+
+   [April to June 2017-2021 EMS Table 2](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/AprJun_20172021_EMS_table.csv)
+
+   [July to September 2017-2021 EMS Table 3](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JulSep_20172021_EMS_table.csv)
+
+   [October to December 2017-2021 EMS Table 4](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/OctDec_20172021_EMS_table.csv)
+Below is an example of our database used for querying our data.
+
+![EMS_table_example](https://user-images.githubusercontent.com/86776606/198105316-4fd46a12-c9d6-4c02-80e7-fb90a5cb1e8d.png)
+
+This is the sql query used to create the table.
+
+![SQL Query](https://user-images.githubusercontent.com/86776606/198105999-4e12c30b-a92c-4a79-8b48-81a07161938b.png)
+
+Queries used to filter the data from 2017-2021 but only specific month ranges.
+
+[Filtered SQL Queries](https://user-images.githubusercontent.com/86776606/198159708-e7ea6b22-59a2-4785-b402-61366ac2193e.png)
+
+Queries used to filter the data from 2017-2021 but only specific month ranges for bethany_data, removing certain columns to test for user interface in javascript/html portion.
+
+[Bethany Filtered Queries](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
 
 
+## Team Roles 
 
+1. Bethany
+   * Github Contributer/Collaborator: created at least one branch for each team member, merge/pull requests, 4 commits from each team member verified
+   * Data Cleaning: Pandas and Jupyter notebook 
+   [Data Cleaning Notebook](https://github.com/Myorignl/Final_Project7/blob/Bethany/datacleaning_jupyter/Clean__ems_data.ipynb)
+   * README.md writeup
 
+2. Dorthy 
+   * Data Extraction & Data Cleaning (shared via Google Drive) 
+   * Presentation & Planning (organization)
+
+3. Matt 
+   * PostgreSQL setup and database storage
+   * Preparation of dataset tables
+
+4. Steven 
+   * Machine Learning Models: SkiKit-Learn
+   * Data Cleaning for ML models
+
+Team meets on a regular bases and maintins open comunication via slack. Zoom meetings are scheduled as needed and discussion time also used as provided during class. 

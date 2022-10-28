@@ -47,7 +47,36 @@ Time frame:
   * Repository Created with individual branches for each team member
   * Assigned team member handling merges into the main branch 
   * Each idividual is responsible to submit required commits into their repository by due date
-  
+
+## Database 
+
+The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of teh original csv file. Setup of the table has been acomplished by the assigned team member, tables have been generated as requested. 
+
+### *Example of tables created:* 
+
+ [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
+
+   [April to June 2017-2021 EMS Table 2](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/AprJun_20172021_EMS_table.csv)
+
+   [July to September 2017-2021 EMS Table 3](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JulSep_20172021_EMS_table.csv)
+
+   [October to December 2017-2021 EMS Table 4](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/OctDec_20172021_EMS_table.csv)
+Below is an example of our database used for querying our data.
+
+![EMS_table_example](https://user-images.githubusercontent.com/86776606/198105316-4fd46a12-c9d6-4c02-80e7-fb90a5cb1e8d.png)
+
+### SQL query used to create the table.
+
+![SQL Query](https://user-images.githubusercontent.com/86776606/198105999-4e12c30b-a92c-4a79-8b48-81a07161938b.png)
+
+Queries used to filter the data from 2017-2021 but only specific month ranges.
+
+[Filtered SQL Queries](https://user-images.githubusercontent.com/86776606/198159708-e7ea6b22-59a2-4785-b402-61366ac2193e.png)
+
+Queries used to filter the data from 2017-2021 but only specific month ranges for bethany_data, removing certain columns to test for user interface in javascript/html portion.
+
+[Bethany Filtered Queries](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
+
 ## Machine Learning 
 
 SkiKit-Learn is the selected Machine Learning Module that will be used during this project. The hosting platform will be utilized on Github.
@@ -128,34 +157,6 @@ Looking closer at the top 5 importances, there seemed to be a strong relationsip
 
 There are no firm conclusions at this point except that more research needs to be done. However, there does seem to be a strong relationship between the hospital and APOT (wait time). Beyond the machine learning models that were run, a linear regression model with a dependent variable of time of day and the independent variable of APOT (wait time) revealed a strong relationship to the time of day and duration of the wait time.
 
-## Database 
-
-The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of teh original csv file. Setup of the table has been acomplished by the assigned team member, tables have been generated as requested. 
-
-### *Example of tables created:* 
-
- [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
-
-   [April to June 2017-2021 EMS Table 2](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/AprJun_20172021_EMS_table.csv)
-
-   [July to September 2017-2021 EMS Table 3](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JulSep_20172021_EMS_table.csv)
-
-   [October to December 2017-2021 EMS Table 4](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/OctDec_20172021_EMS_table.csv)
-Below is an example of our database used for querying our data.
-
-![EMS_table_example](https://user-images.githubusercontent.com/86776606/198105316-4fd46a12-c9d6-4c02-80e7-fb90a5cb1e8d.png)
-
-### SQL query used to create the table.
-
-![SQL Query](https://user-images.githubusercontent.com/86776606/198105999-4e12c30b-a92c-4a79-8b48-81a07161938b.png)
-
-Queries used to filter the data from 2017-2021 but only specific month ranges.
-
-[Filtered SQL Queries](https://user-images.githubusercontent.com/86776606/198159708-e7ea6b22-59a2-4785-b402-61366ac2193e.png)
-
-Queries used to filter the data from 2017-2021 but only specific month ranges for bethany_data, removing certain columns to test for user interface in javascript/html portion.
-
-[Bethany Filtered Queries](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
 
 ## Team Roles 
 
@@ -166,7 +167,7 @@ Queries used to filter the data from 2017-2021 but only specific month ranges fo
    * README.md writeup
 
 2. Dorthy 
-   * Data Extraction & Cleaning 
+   * Data extraction & cleaning 
    * Presentation & structure
 
 3. Matt 

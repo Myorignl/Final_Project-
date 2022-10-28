@@ -56,6 +56,10 @@ Time frame:
 
 3. Matt 
    * PostgreSQL setup and database storage
+   * ERD Diagram 
+
+   [ERD Diagram](https://github.com/Myorignl/Final_Project7/blob/Matt/EMS_ERD_Diagram.png)
+
    * Preparation of dataset tables: 
 
    [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)

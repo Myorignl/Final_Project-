@@ -71,15 +71,15 @@ Below is an example of our database used for querying our data.
 
 This is the sql query used to create the table.
 
-![image](https://user-images.githubusercontent.com/86776606/198105999-4e12c30b-a92c-4a79-8b48-81a07161938b.png)
+![SQL Query](https://user-images.githubusercontent.com/86776606/198105999-4e12c30b-a92c-4a79-8b48-81a07161938b.png)
 
 Queries used to filter the data from 2017-2021 but only specific month ranges.
 
-![image](https://user-images.githubusercontent.com/86776606/198159708-e7ea6b22-59a2-4785-b402-61366ac2193e.png)
+[Filtered SQL Queries](https://user-images.githubusercontent.com/86776606/198159708-e7ea6b22-59a2-4785-b402-61366ac2193e.png)
 
-Queries used to filter the data from 2017-2021 but only specific month ranges for bethany_data.
+Queries used to filter the data from 2017-2021 but only specific month ranges for bethany_data, removing certain columns to test for user interface in javascript/html portion.
 
-![image](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
+[Bethany Filtered Queries](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
 
 ### Machine Learning 
 
@@ -87,19 +87,19 @@ Queries used to filter the data from 2017-2021 but only specific month ranges fo
 
 Below is a sample of some of the errors that were incurred when cleaning our data:
 
-![Error_Caps_v_Lowercase](https://user-images.githubusercontent.com/106631875/198457801-96c943f4-6987-47b1-81e5-d88baf240310.png)
+[Error_Caps_v_Lowercase](https://user-images.githubusercontent.com/106631875/198457801-96c943f4-6987-47b1-81e5-d88baf240310.png)
 
 The error above revealed a conflict between the same data that was in all CAPS vs Upper and lowercase. This was an easy fix which was resolved by creating consistent naming conventions.
 
-![Error_Date_String_to_Float](https://user-images.githubusercontent.com/106631875/198457877-aa58eab0-633d-4d26-a691-4f4b420f33bf.png)
+[Error_Date_String_to_Float](https://user-images.githubusercontent.com/106631875/198457877-aa58eab0-633d-4d26-a691-4f4b420f33bf.png)
 
 The error above revealed that the date values were string data types instead of float which meant we needed to convert the data type.
 
-![Error_string_to_float](https://user-images.githubusercontent.com/106631875/198458098-74aaef3e-d22e-4e83-be56-acb80340098a.png)
+[Error_string_to_float](https://user-images.githubusercontent.com/106631875/198458098-74aaef3e-d22e-4e83-be56-acb80340098a.png)
 
 The error above revealed that we had a column of data that was a mix of numerical values and alphanumerical values. After looking at the relationship between the columns, it was determined that the value of the column could be dropped since it was referenced by an adjacent value.
 
-![Error_over_116k_rows](https://user-images.githubusercontent.com/106631875/198457945-a35ec117-f759-4c4c-9319-5f82c43b07a2.png)
+[Error_over_116k_rows](https://user-images.githubusercontent.com/106631875/198457945-a35ec117-f759-4c4c-9319-5f82c43b07a2.png)
 
 The error above revealed a limitation which is addressed below. The dataset was too large to work with and we are seeking an alternative solution. 
 
@@ -123,18 +123,18 @@ Models and Strategies used include the following:
 
 The initial results yielded a high accuracy score =0.988, as shown below:
 
-![Results_initial_with_APOT](https://user-images.githubusercontent.com/106631875/198458856-32057196-dba0-4c56-a9f5-d336ece950a0.png)
+[Results_initial_with_APOT](https://user-images.githubusercontent.com/106631875/198458856-32057196-dba0-4c56-a9f5-d336ece950a0.png)
 
 After running the models listed above, the Balanced Random Forest model seemed to provide the most accurate results. The model indicated that there is strong relationship between the Status (wait time) and the 5 top importances.  
 
-![Results_importances_initial](https://user-images.githubusercontent.com/106631875/198458636-c720af18-6a64-4216-85d5-93bd58d7e2b8.png)
+[Results_importances_initial](https://user-images.githubusercontent.com/106631875/198458636-c720af18-6a64-4216-85d5-93bd58d7e2b8.png)
 
 ## Refined Results
 
 After reviewing the results and re-examining the data, it was noticed that the APOT and Status columns were too strongly related and may be skewing the results.
 In an effort to refine the results, we dropped the APOT (wait time) column which reduced the accuracy but in theory gave a truer value. 
 
-![Results_no_APOT](https://user-images.githubusercontent.com/106631875/198459162-8f3f9024-ce6b-434c-a962-a155c8a237fe.png)
+[Results_no_APOT](https://user-images.githubusercontent.com/106631875/198459162-8f3f9024-ce6b-434c-a962-a155c8a237fe.png)
 
 Looking closer at the top 5 importances, there seemed to be a strong relationsip with the APOT (wait time). On closure examination, the top 5 importances seemed to all be related. After further pre-processing our data, the model was run again with the index (renamed record), hospital code, lat and long dropped. 
 

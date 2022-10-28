@@ -1,30 +1,28 @@
-# Final Project - Segment 1 Group 7
+# Final Project - Segment 1 (Group 7)
 
 ## Presentation  
 
-#### Overview 
+### Overview 
 
-Ambulance Patient Offload Times for Sacramento County Hospitals. Develop a regressive model that can provide predictive data for each hospital.  Identify what patterns exist within the data through machine learning. The report will assist Hospital staff in addressing staffing issues and hospital throughput as well as assist ambulance companies in better planning unit allocation. 
+Ambulance Patient Offload Times for Sacramento County Hospitals. Develop a regressive model that can provide predictive data for each hospital.  Identify what patterns exist within the data through machine learning. The report will assist Hospital staff in addressing staffing issues and hospital throughput as well as assist ambulance companies in better planning unit allocation. The dataset used and authorization for this project was obtained from the Sacramento County EMS Agency. 
 
- * Data Set obtained from Sacramaento County EMS agency 
-
-#### Description 
+### Description 
 
 Extended Ambulance Patient Offload Times create idle ambulances that could be needed for emergencies on the road but are instead waiting for their patient to be placed in an ED bed. When an ambulance crew is awaiting placement, they are unable to respond to another emergency call. There are numbered ambulance resources for Sacramento County and lack of unit availability due to APOT translates into longer EMS responses to the detriment of the community.
 
-#### Audience
+### Audience
 
 * Hospital staff and Ambulance Drivers. 
 
-#### Dataset Questions  
+### Dataset Questions  
 
-1. Which impressions has the longest/shortest APOTs? (Overall and by Hospital codes)
-2.	Compare impressions to zip codes. Which zip codes have the highest/lowest rates of which impressions? 
-3.	Which zip codes utilize ambulance transports to the ER the most in 2017-2022?
-4.	Wait times per hospital by date/time 
-5.	Do any patterns arise from the data? 
+  - Which impressions has the longest/shortest APOTs? (Overall and by Hospital codes)
+  - Compare impressions to zip codes. Which zip codes have the highest/lowest rates of which impressions? 
+  - Which zip codes utilize ambulance transports to the ER the most in 2017-2022?
+  - Wait times per hospital by date/time 
+  - Do any patterns arise from the data? 
 
-#### Measuring metrics for ambulance patient offload times  
+### Measuring metrics for ambulance patient offload times  
 
 Time frame: 
 * (<=20.49)
@@ -36,7 +34,7 @@ Time frame:
 90th Percentile of APOT per Hour
 * Create array per hour by hospital and generate a 90th percentile
 
-#### Technologies Used 
+### Technologies Used 
 
 * Jupyter Notebook & Pandas 
 * Visual Studio Code
@@ -45,17 +43,25 @@ Time frame:
 * Undetermined Which to Use: Tableau or User Interface 
 
 ## Github
-- Branches created in thw repository for each individual team member 
-- Team Member (Bethany) handles merges into main branch
-- Exchange of files ie. new csv files created via SQL are exchanged via individual branch. 
-- Each team mmber is responsible to submit required commits into their individual branch prior to due date/time
 
-## Machine Learning Model 
-   * Machine Learning Models: SkiKit-Learn
-   * Data Cleaning for ML models
-   * The hosting platform will be utilized on Github.
+  * Repository Created with individual branches for each team member
+  * Assigned team member handling merges into the main branch 
+  * Each idividual is responsible to submit required commits into their repository by due date
+  
+## Machine Learning 
 
-#### Pre-Processing, Data Cleaning, Errors and Solutions
+SkiKit-Learn is the selected Machine Learning Module that will be used during this project. The hosting platform will be utilized on Github.
+Models and Strategies used include the following:
+
+- Linear Regression
+- Balanced Random Forest Classifier
+- Easy Ensemble AdaBoost Classifier
+- Oversampling
+- SMOTE Oversampling
+- Undersampling
+- Combination (Over and Under) Sampling
+
+### Pre-Processing, Data Cleaning, Errors and Solutions
 
 Below is a sample of some of the errors that were incurred when cleaning our data:
 
@@ -75,23 +81,11 @@ The error above revealed that we had a column of data that was a mix of numerica
 
 The error above revealed a limitation which is addressed below. The dataset was too large to work with and we are seeking an alternative solution. 
 
-#### Limitations
+### Limitations
 
 Our dataset included over 500k rows of data which ended up being more than the machine learning models code run on my computer. In order to continue working with the data a smaller sample of only 1000 rows was used with plans to run a larger set.
 
-#### Models and Strategies 
-
-Models and Strategies used include the following:
-
-- Linear Regression
-- Balanced Random Forest Classifier
-- Easy Ensemble AdaBoost Classifier
-- Oversampling
-- SMOTE Oversampling
-- Undersampling
-- Combination (Over and Under) Sampling
-
-#### *Initial Results8
+### Initial Results
 
 The initial results yielded a high accuracy score =0.988, as shown below:
 
@@ -101,7 +95,7 @@ After running the models listed above, the Balanced Random Forest model seemed t
 
 [Results_importances_initial](https://user-images.githubusercontent.com/106631875/198458636-c720af18-6a64-4216-85d5-93bd58d7e2b8.png)
 
-#### *Refined Results*
+### Refined Results
 
 After reviewing the results and re-examining the data, it was noticed that the previous Status buckets columns were too strongly related and may be skewing the results. Thus, we updated the Status buckets and refined the buckets, to more specific time buckets, in hopes that would take care of possible overfitting.
 In an effort to refine the results, we dropped the APOT (wait time) column which reduced the accuracy but in theory gave a truer value. 
@@ -134,15 +128,13 @@ Looking closer at the top 5 importances, there seemed to be a strong relationsip
 
 There are no firm conclusions at this point except that more research needs to be done. However, there does seem to be a strong relationship between the hospital and APOT (wait time). Beyond the machine learning models that were run, a linear regression model with a dependent variable of time of day and the independent variable of APOT (wait time) revealed a strong relationship to the time of day and duration of the wait time.
 
-
-
 ## Database 
 
-The database platform chosen for this project is SQL. The team member handling the SQL data base has completed set up and storage of data. Team member is handling requests for data and creating subsets/ tables as required.  
+The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of teh original csv file. Setup of the table has been acomplished by the assigned team member, tables have been generated as requested. 
 
-* Datasets created to date: 
+### *Example of tables created:* 
 
-   [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
+ [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
 
    [April to June 2017-2021 EMS Table 2](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/AprJun_20172021_EMS_table.csv)
 
@@ -153,7 +145,7 @@ Below is an example of our database used for querying our data.
 
 ![EMS_table_example](https://user-images.githubusercontent.com/86776606/198105316-4fd46a12-c9d6-4c02-80e7-fb90a5cb1e8d.png)
 
-This is the sql query used to create the table.
+### SQL query used to create the table.
 
 ![SQL Query](https://user-images.githubusercontent.com/86776606/198105999-4e12c30b-a92c-4a79-8b48-81a07161938b.png)
 
@@ -165,7 +157,6 @@ Queries used to filter the data from 2017-2021 but only specific month ranges fo
 
 [Bethany Filtered Queries](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
 
-
 ## Team Roles 
 
 1. Bethany
@@ -175,15 +166,15 @@ Queries used to filter the data from 2017-2021 but only specific month ranges fo
    * README.md writeup
 
 2. Dorthy 
-   * Data Extraction & Data Cleaning (shared via Google Drive) 
-   * Presentation & Planning (organization)
+   * Data Extraction & Cleaning 
+   * Presentation & structure
 
 3. Matt 
    * PostgreSQL setup and database storage
-   * Preparation of dataset tables
+   * Preparation of dataset tables: 
 
 4. Steven 
    * Machine Learning Models: SkiKit-Learn
    * Data Cleaning for ML models
 
-Team meets on a regular bases and maintins open comunication via slack. Zoom meetings are scheduled as needed and discussion time also used as provided during class. 
+

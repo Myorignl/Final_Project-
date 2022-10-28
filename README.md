@@ -57,7 +57,7 @@ Time frame:
 3. Matt 
    * PostgreSQL setup and database storage
    * Preparation of dataset tables: 
-   
+
    [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
 
    [April to June 2017-2021 EMS Table 2](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/AprJun_20172021_EMS_table.csv)
@@ -142,8 +142,25 @@ After running the models listed above, the Balanced Random Forest model seemed t
 
 ## Refined Results
 
-After reviewing the results and re-examining the data, it was noticed that the APOT and Status columns were too strongly related and may be skewing the results.
+After reviewing the results and re-examining the data, it was noticed that the previous Status buckets columns were too strongly related and may be skewing the results. Thus, we updated the Status buckets and refined the buckets, to more specific time buckets, in hopes that would take care of possible overfitting.
 In an effort to refine the results, we dropped the APOT (wait time) column which reduced the accuracy but in theory gave a truer value. 
+
+The previous Status buckets used: 
+
+* Benchmark
+('0 (<20min)')
+* Extreme
+('1 (>20.01min)')
+
+The updated Status buckets were changed to: 
+
+* Benchmark
+('0 (<20min)')  
+* Extreme
+('1 (>21-60min)')
+('2 (>61-120min)')
+('3 (>121-180min)')
+('4 (>181 min)')
 
 [Results_no_APOT](https://user-images.githubusercontent.com/106631875/198459162-8f3f9024-ce6b-434c-a962-a155c8a237fe.png)
 

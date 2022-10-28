@@ -17,3 +17,7 @@ Queries used to filter the data from 2017-2021 but only specific month ranges.
 Queries used to filter the data from 2017-2021 but only specific month ranges for bethany_data.
 
 ![image](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
+
+Here is a rough ERD diagram to show the relations between our different tables
+
+![EMS_ERD_Diagram](https://user-images.githubusercontent.com/86776606/198749633-41fd7d42-7110-4a8e-b294-373a8798499b.png)

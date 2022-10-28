@@ -1,22 +1,20 @@
-# Final_Project7
+# Final Project - Segment 1 Group 7
 
-## Presentation 
+## Presentation  
 
-* TBD 
-
-## Overview 
+### Overview 
 
 Ambulance Patient Offload Times for Sacramento County Hospitals. Develop a regressive model that can provide predictive data for each hospital.  Identify what patterns exist within the data through machine learning. The report will assist Hospital staff in addressing staffing issues and hospital throughput as well as assist ambulance companies in better planning unit allocation. 
 
-## Description 
+### Description 
 
 Extended Ambulance Patient Offload Times create idle ambulances that could be needed for emergencies on the road but are instead waiting for their patient to be placed in an ED bed. When an ambulance crew is awaiting placement, they are unable to respond to another emergency call. There are numbered ambulance resources for Sacramento County and lack of unit availability due to APOT translates into longer EMS responses to the detriment of the community.
 
-## Audience
+### Audience
 
 * Hospital staff and Ambulance Drivers. 
 
-## Dataset Questions  
+### Dataset Questions  
 
 1. Which impressions has the longest/shortest APOTs? (Overall and by Hospital codes)
 2.	Compare impressions to zip codes. Which zip codes have the highest/lowest rates of which impressions? 
@@ -24,14 +22,14 @@ Extended Ambulance Patient Offload Times create idle ambulances that could be ne
 4.	Wait times per hospital by date/time 
 5.	Do any patterns arise from the data? 
 
-## Measuring metrics for ambulance patient offload times  
+### Measuring metrics for ambulance patient offload times  
 
 Time frame: 
-* <=20.49
-* >=20.50 to <=60.49
-* >=60.50 to <=120.49
-* <=120.50 to <=180.49
-* <=180.50
+* (<=20.49)
+* (>=20.50 to <=60.49)
+* (>=60.50 to <=120.49)
+* (<=120.50 to <=180.49)
+* (<=180.50)
 
 90th Percentile of APOT per Hour
 * Create array per hour by hospital and generate a 90th percentile
@@ -43,6 +41,25 @@ Time frame:
 * PostgreSQL
 * SciKit-Learn Libraries
 * Undetermined Which to Use: Tableau or User Interface 
+
+## Team Roles 
+
+1. Bethany
+   * Github Contributer/Collaborator: created at least one branch for each team member, merge/pull requests, 4 commits from each team member verified
+   * Data Cleaning: Pandas and Jupyter notebook 
+   * README.md writeup
+
+2. Dorthy 
+   * Data Extraction & Data Cleaning 
+   * Presentation & Planning of project
+
+3. Matt 
+   * PostgreSQL setup and database storage
+   * Preparation of dataset tables: 
+
+4. Steven 
+   * Machine Learning Models: SkiKit-Learn
+   * Data Cleaning for ML models
 
 ### Hosting Platform
 
@@ -130,20 +147,7 @@ There are no firm conclusions at this point except that more research needs to b
 
 ### Issues/Solutions 
 
-## Team Roles 
 
-1. Bethany
-   * Github Contributer/Collaborator: created at least one branch for each team member, merge/pull requests 
-   * Data Cleaning: Pandas and Jupyter notebook 
-   * README.md writeup
-
-2. Dorthy 
-
-3. Matt 
-   * PostgreSQL setup and database storage
-   * Preparation of dataset tables: 
-
-4. Steven 
 
 
 

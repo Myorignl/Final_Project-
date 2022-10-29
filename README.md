@@ -50,7 +50,7 @@ Time frame:
 
 ## Database 
 
-The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of the original csv file. Setup of the table has been acomplished by the assigned team member, tables have been generated as requested. 
+The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of the original csv file. Setup of the table has been accomplished by the assigned team member, tables have been generated as requested. 
 
 
 

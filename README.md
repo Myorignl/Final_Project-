@@ -46,11 +46,11 @@ Time frame:
 
   * Repository Created with individual branches for each team member
   * Assigned team member handling merges into the main branch 
-  * Each idividual is responsible to submit required commits into their repository by due date
+  * Each individual is responsible to submit required commits into their repository by due date
 
 ## Database 
 
-The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of teh original csv file. Setup of the table has been acomplished by the assigned team member, tables have been generated as requested. 
+The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of the original csv file. Setup of the table has been acomplished by the assigned team member, tables have been generated as requested. 
 
 
 
@@ -134,7 +134,7 @@ After running the models listed above, the Balanced Random Forest model seemed t
 
 ### Refined Results
 
-After reviewing the results and re-examining the data, it was noticed that the previous Status buckets columns were too strongly related and may be skewing the results. Thus, we updated the Status buckets and refined the buckets, to more specific time buckets, in hopes that would take care of possible overfitting.
+After reviewing the results and re-examining the data, it was noted that the previous Status buckets columns were strongly related and may be skewing the results. Thus, we updated the Status buckets and refined the buckets, to more specific time buckets, in hopes that would take care of possible overfitting.
 In an effort to refine the results, we dropped the APOT (wait time) column which reduced the accuracy but in theory gave a truer value. 
 
 [Target Column Values](https://github.com/Myorignl/Final_Project7/blob/Bethany/input_labels_tabledata.png)
@@ -158,7 +158,7 @@ The updated Status buckets were changed to:
 
 [Results_no_APOT](https://user-images.githubusercontent.com/106631875/198459162-8f3f9024-ce6b-434c-a962-a155c8a237fe.png)
 
-Looking closer at the top 5 importances, there seemed to be a strong relationsip with the APOT (wait time). On closure examination, the top 5 importances seemed to all be related. After further pre-processing our data, the model was run again with the index (renamed record), hospital code, lat and long dropped. 
+Looking closer at the top 5 features, there seemed to be a strong relationsip with the APOT (wait time). Upon closer examination, the top 5 features appear to be related. After further pre-processing our data, the model was run again with the index (renamed id), hospital code, lat and long dropped. 
 
 
 ### Preliminary Machine Learning Conclusions

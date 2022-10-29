@@ -52,6 +52,8 @@ Time frame:
 
 The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of the original csv file. Setup of the table has been accomplished by the assigned team member, tables have been generated as requested. 
 
+An ERD Diagram was also created as a reference for creating the database tables in SQL. 
+[ERD Diagram](https://github.com/Myorignl/Final_Project7/blob/Matt/EMS_ERD_Diagram.png)
 
 
 ### *Example of tables created:* 
@@ -68,8 +70,6 @@ The database selected is Structured Query Language (SQL). The use of this databa
 Below is an example of our database used for querying our data.
 
 ![EMS_table_example](https://user-images.githubusercontent.com/86776606/198105316-4fd46a12-c9d6-4c02-80e7-fb90a5cb1e8d.png)
-
-
 
 ### SQL query used to create the table.
 
@@ -100,8 +100,6 @@ Models and Strategies used include the following:
 
 Below is a sample of some of the errors that were incurred when cleaning our data:
 
-
-
 [Error_Caps_v_Lowercase](https://user-images.githubusercontent.com/106631875/198457801-96c943f4-6987-47b1-81e5-d88baf240310.png)
 
 The error above revealed a conflict between the same data that was in all CAPS vs Upper and lowercase. This was an easy fix which was resolved by creating consistent naming conventions.
@@ -128,7 +126,7 @@ The initial results yielded a high accuracy score =0.988, as shown below:
 
 [Results_initial_with_APOT](https://user-images.githubusercontent.com/106631875/198458856-32057196-dba0-4c56-a9f5-d336ece950a0.png)
 
-After running the models listed above, the Balanced Random Forest model seemed to provide the most accurate results. The model indicated that there is strong relationship between the Status (wait time) and the 5 top importances.  
+After running the models listed above, the Balanced Random Forest model seemed to provide the most accurate results. The model indicated that there is strong relationship between the Status (wait time) and the 5 top feature importances.  
 
 [Results_importances_initial](https://user-images.githubusercontent.com/106631875/198458636-c720af18-6a64-4216-85d5-93bd58d7e2b8.png)
 
@@ -180,7 +178,8 @@ There are no firm conclusions at this point except that more research needs to b
 
 3. Matt 
    * PostgreSQL setup and database storage
-   * Preparation of dataset tables: 
+   * Preparation of dataset tables & ERD diagram
+   [ERD Diagram](https://github.com/Myorignl/Final_Project7/blob/Matt/EMS_ERD_Diagram.png)
 
 4. Steven 
    * Machine Learning Models: SkiKit-Learn

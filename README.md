@@ -52,6 +52,8 @@ Time frame:
 
 The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of teh original csv file. Setup of the table has been acomplished by the assigned team member, tables have been generated as requested. 
 
+
+
 ### *Example of tables created:* 
 
  [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
@@ -61,9 +63,13 @@ The database selected is Structured Query Language (SQL). The use of this databa
    [July to September 2017-2021 EMS Table 3](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JulSep_20172021_EMS_table.csv)
 
    [October to December 2017-2021 EMS Table 4](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/OctDec_20172021_EMS_table.csv)
+
+
 Below is an example of our database used for querying our data.
 
 ![EMS_table_example](https://user-images.githubusercontent.com/86776606/198105316-4fd46a12-c9d6-4c02-80e7-fb90a5cb1e8d.png)
+
+
 
 ### SQL query used to create the table.
 
@@ -93,6 +99,8 @@ Models and Strategies used include the following:
 ### Pre-Processing, Data Cleaning, Errors and Solutions
 
 Below is a sample of some of the errors that were incurred when cleaning our data:
+
+
 
 [Error_Caps_v_Lowercase](https://user-images.githubusercontent.com/106631875/198457801-96c943f4-6987-47b1-81e5-d88baf240310.png)
 

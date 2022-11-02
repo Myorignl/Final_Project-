@@ -69,3 +69,10 @@ select * from Final_EMS ORDER BY random() limit 10000;
 
 --Queries a random sample of 50,000 rows
 select * from Final_EMS ORDER BY random() limit 50000;
+
+--Queries all the data for hospital_code 280
+select * from Final_EMS where hospital_code=280
+
+--Queries a random sample of data for hospital_code 280
+select * from Final_EMS where hospital_code=280
+order by random() limit 10000;

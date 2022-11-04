@@ -55,6 +55,8 @@ The database selected is Structured Query Language (SQL). The use of this databa
 An ERD Diagram was also created as a reference for creating the database tables in SQL. 
 [ERD Diagram](https://github.com/Myorignl/Final_Project7/blob/Matt/EMS_ERD_Diagram.png)
 
+![image](https://user-images.githubusercontent.com/104601282/199882738-09efc61a-4915-499b-a875-90b186c29ef2.png)
+
 
 ### *Example of tables created:* 
 

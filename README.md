@@ -48,25 +48,42 @@ Time frame:
   * Assigned team member handling merges into the main branch 
   * Each individual is responsible to submit required commits into their repository by due date
 
+## Dashboard 
+
+* Storyboard: [Google Slides](https://github.com/Myorignl/Final_Project7/blob/main/Final%20Project%20Segment%202%20Slides.pdf)
+
+* Tools Used to Create Final Dashboard: 
+  * Tableau
+
+By using the EMS dataset, we will show the relationship of ICD impression codes v. Hospital Code, ICD impression codes v. APOT times, Hospital Code v. APOT times. These relationships will be illustrated graphically, in which users can explore the data using applied filters on each chart. By looking at each chart, the user should be able to understand the reasoning behind why these features were chosen for our machine learning model. For example, when looking at the 'Hospital code v. APOT Times' bar chart, there is a variation of APOT times depending on the hospital, which begs the question, 'Why would the APOT times be higher at one hospital versus another? Does the type of ICD impression influence the APOT times? Or, do some hospitals receive more of one type of ICD impression than another, and is that what it influencing the APOT times?'. 
+
+* Interactive Elements: Applied filters on each chart 
+  * ICD impression codes v. Hospital Code: Hospital Code Filter 
+  * ICD impressions v. APOT Times: ICD impression Filter 
+  * Hospital Code v. APOT Times: Hospital Code Filter
+* Other Dashboard Elements: 
+  * Confusion Matrix Table 
+  * Machine Learning Model Results Table: Accuracy Score, F1 Score, Ranking Importance of Features
+
 ## Database 
 
 The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of the original csv file. Setup of the table has been accomplished by the assigned team member, tables have been generated as requested. 
 
 An ERD Diagram was also created as a reference for creating the database tables in SQL. 
-[ERD Diagram](https://github.com/Myorignl/Final_Project7/blob/Matt/EMS_ERD_Diagram.png)
+[ERD Diagram](https://github.com/Myorignl/Final_Project7/blob/Matt/Images/EMS_ERD_Diagram.png)
 
 ![image](https://user-images.githubusercontent.com/104601282/199882738-09efc61a-4915-499b-a875-90b186c29ef2.png)
 
 
-### *Example of tables created:* 
+### *Example of Tables Created:* 
 
- [January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
+[January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
 
-   [April to June 2017-2021 EMS Table 2](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/AprJun_20172021_EMS_table.csv)
+[April to June 2017-2021 EMS Table 2](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/AprJun_20172021_EMS_table.csv)
 
-   [July to September 2017-2021 EMS Table 3](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JulSep_20172021_EMS_table.csv)
+[July to September 2017-2021 EMS Table 3](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JulSep_20172021_EMS_table.csv)
 
-   [October to December 2017-2021 EMS Table 4](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/OctDec_20172021_EMS_table.csv)
+[October to December 2017-2021 EMS Table 4](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/OctDec_20172021_EMS_table.csv)
 
 
 Below is an example of our database used for querying our data.
@@ -120,7 +137,7 @@ The error above revealed a limitation which is addressed below. The dataset was 
 
 ### Limitations
 
-Our dataset included over 500k rows of data which ended up being more than the machine learning models code run on my computer. In order to continue working with the data a smaller sample of only 1000 rows was used with plans to run a larger set.
+Our dataset included over 500k rows of data which ended up being more than the machine learning models code run on my computer. In order to continue working with the data, a smaller random sample of only 10000 rows was used with plans to run a larger set.
 
 ### Initial Results
 
@@ -128,13 +145,13 @@ The initial results yielded a high accuracy score =0.988, as shown below:
 
 [Results_initial_with_APOT](https://user-images.githubusercontent.com/106631875/198458856-32057196-dba0-4c56-a9f5-d336ece950a0.png)
 
-After running the models listed above, the Balanced Random Forest model seemed to provide the most accurate results. The model indicated that there is strong relationship between the Status (wait time) and the 5 top feature importances.  
+After running the models listed above, the Balanced Random Forest model resulted in a higher accuracy and F1 score than the other models tested. The model indicated that there is strong relationship between the Status (wait time) and the 5 top feature importances.  
 
 [Results_importances_initial](https://user-images.githubusercontent.com/106631875/198458636-c720af18-6a64-4216-85d5-93bd58d7e2b8.png)
 
 ### Refined Results
 
-After reviewing the results and re-examining the data, it was noted that the previous Status buckets columns were strongly related and may be skewing the results. Thus, we updated the Status buckets and refined the buckets, to more specific time buckets, in hopes that would take care of possible overfitting.
+After reviewing the results and re-examining the data, it was noted that the previous Status buckets columns were too closely related and may be skewing the results. Thus, we updated the Status buckets and refined the buckets, to more specific time buckets, in hopes that would take care of possible overfitting.
 In an effort to refine the results, we dropped the APOT (wait time) column which reduced the accuracy but in theory gave a truer value. 
 
 [Target Column Values](https://github.com/Myorignl/Final_Project7/blob/Bethany/input_labels_tabledata.png)
@@ -158,15 +175,15 @@ The updated Status buckets were changed to:
 
 [Results_no_APOT](https://user-images.githubusercontent.com/106631875/198459162-8f3f9024-ce6b-434c-a962-a155c8a237fe.png)
 
-Looking closer at the top 5 features, there seemed to be a strong relationsip with the APOT (wait time). Upon closer examination, the top 5 features appear to be related. After further pre-processing our data, the model was run again with the index (renamed id), hospital code, lat and long dropped. 
+Looking closer at the top 5 features, there seemed to be a strong relationship with the APOT (wait time). Upon closer examination, the top 5 features appear to be related. After further pre-processing our data, the model was run again with the index (renamed id), hospital code, lat and long dropped. 
 
 
 ### Preliminary Machine Learning Conclusions
 
-There are no firm conclusions at this point except that more research needs to be done. However, there does seem to be a strong relationship between the hospital and APOT (wait time). Beyond the machine learning models that were run, a linear regression model with a dependent variable of time of day and the independent variable of APOT (wait time) revealed a strong relationship to the time of day and duration of the wait time.
+There are no firm conclusions at this point except that more research needs to be done. However, there does seem to be a strong relationship between the hospital code and APOT (wait time). Beyond the machine learning models that were run, a linear regression model with a dependent variable of time of day and the independent variable of APOT (wait time) revealed a strong relationship to the time of day and duration of the wait time.
 
 
-## Team Roles 
+## Team Roles & Communication Protocols (Deliverable 1) 
 
 1. Bethany
    * Github Contributer/Collaborator: created at least one branch for each team member, merge/pull requests, 4 commits from each team member verified
@@ -187,4 +204,18 @@ There are no firm conclusions at this point except that more research needs to b
    * Machine Learning Models: SkiKit-Learn
    * Data Cleaning for ML models
 
+## Team Roles & Communication Protocols (Deliverable 2)
 
+1. Bethany
+
+Bethany attempted to produce an interactive webpage using Javascript, but the .json file was not formatted correctly to be read into the console. The .json file was converted into a .js file, in which I was able to produce a dropdown menu for the ICD impressions, but when I tried to produce the associated bar charts upon each option click on the dropdown list, the charts would not populate. I then attempted to use d3.json() function using the .json file, but the charts would still not populate upon each ICD impression option click. Due to multiple hours and days of trying to determine what the problem is, it was then decided that Tableau might be a better option to produce the dashboard on. Tableau was able to read in the .json file, and the bar charts, described in the 'Dashboard' section above, were then able to be created. The next step will be to discuss with the rest of the group how the charts will be organized onto the final dashboard, as well as how to incorporate the machine learning model's results. 
+
+2. Dorthy 
+
+Dorthy developed the Google Slides Storyboard outlining the overall project, which includes the selected topic, the reason the topic was selected, the description of the source of data, the questions that the team hopes to answer with the data, a description of the data exploration phase of the project, and the description of the analysis phase of the project. Dorthy then asked Bethany and Steve to update the 'Data Analysis' portion of the google slides with the current results found within the machine learning model results and the process of how the testing and training sets were created within the code, as well as updating the Confusion matrix table found on the dashboard template slide. 
+
+3. Matt 
+
+4. Steven 
+
+Steven attempted to rerun the machine learning model using datasets of various sample sizes, 1 dataset with 50000 rows, 1 dataset with 1000 rows, 1 dataset with 10000 rows, and finally 1 dataset with rows specific to one Hospital. He tried multiple dataset sizes to see if the amount of rows would increase the accuracy or F1 score, and the same reasoning was applied to the dataset specific to one hospital. The accuracy and F1 score varied only slightly in either direction, but none of the datasets seemed to influence the results as one might have expected. After discussing these results with the group, it was then determined that a new dataset would need to be created by Matt, that would provide a random sample of 10000 rows from the entire 500K dataset. The results of using this new random sample dataset .... 

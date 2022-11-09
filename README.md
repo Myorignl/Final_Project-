@@ -84,14 +84,6 @@ Looking closer at the top 5 importances, there seemed to be a strong relationsip
 
 ## Exploring the Relationships Between Data
 
-### Random Sample of 50k: Impressions v APOT (Wait Times)
-
-![Random_sample_50k_impression_v_APOT_breakdown](https://user-images.githubusercontent.com/106631875/200699398-b38ebc14-e25f-4556-81f5-093cfd12973a.png)
-
-We created 5 APOT (waiting time) buckets to categorize the various wait times. As you can see in the above diagram, a majority of the wait times in this sample were 20 minutes or less (62%). The next largest group fell into the 21-60 minutes category (31.2%). The full results are in the chart below.
-
-![Random_sample_50k_impression_v_APOT](https://user-images.githubusercontent.com/106631875/200699505-edd7603a-e262-4c60-ad9b-dcb4aabb61be.png)
-
 ### Hospital 280 Results
 
 Below are the results of the Balanced Randome Forest Classifier for a single hospital (Hospital 280)
@@ -101,6 +93,14 @@ Below are the results of the Balanced Randome Forest Classifier for a single hos
 Below are the results of the Easy Ensemble Adaboost Classifier for a single hospital (Hospital 280)
 
 ![Easy_Ensemble_Adaboost_Classifier_Hospital_280_All_results](https://user-images.githubusercontent.com/106631875/200699706-2afedf29-cf26-459b-bb4a-b2750a223512.png)
+
+### Random Sample of 50k: Impressions v APOT (Wait Times)
+
+![Random_sample_50k_impression_v_APOT_breakdown](https://user-images.githubusercontent.com/106631875/200699398-b38ebc14-e25f-4556-81f5-093cfd12973a.png)
+
+We created 5 APOT (waiting time) buckets to categorize the various wait times. As you can see in the above diagram, a majority of the wait times in this sample were 20 minutes or less (62%). The next largest group fell into the 21-60 minutes category (31.2%). The full results are in the chart below.
+
+![Random_sample_50k_impression_v_APOT](https://user-images.githubusercontent.com/106631875/200699505-edd7603a-e262-4c60-ad9b-dcb4aabb61be.png)
 
 ## Conclusions
 

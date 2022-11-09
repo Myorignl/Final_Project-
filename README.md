@@ -44,9 +44,34 @@ The initial results yeilded a high accuracy score as shown below.
 
 <img width="280" alt="Results_initial_with_APOT" src="https://user-images.githubusercontent.com/106631875/198458856-32057196-dba0-4c56-a9f5-d336ece950a0.png">
 
+### Balanced Random Forest Classifier
 After running the models listed above, the Balanced Random Forest model seemed to provided the most accurate results. The model indicated there is strong relationship between the Status (wait time) and the 5 top importances.  
 
 ![Results_importances_initial](https://user-images.githubusercontent.com/106631875/198458636-c720af18-6a64-4216-85d5-93bd58d7e2b8.png)
+
+### Easy Ensemble AdaBoost Classifier
+![EasyEnsemblerAdaBoostClassifier1](https://user-images.githubusercontent.com/106631875/200724630-9027c236-6dda-4b4a-a0f2-704fdbc2bbf6.png)
+
+![EasyEnsemblerAdaBoostClassifier2](https://user-images.githubusercontent.com/106631875/200724648-e5e53e9f-d6b3-4988-8564-9122e5b015eb.png)
+
+### Oversampling
+![Oversampling1](https://user-images.githubusercontent.com/106631875/200723901-9940280a-2c93-4c7e-82a6-80ae2e581f48.png)
+
+![Oversampling2](https://user-images.githubusercontent.com/106631875/200723911-abe6d16c-7529-4a25-84b7-f3cdcea66c4f.png)
+
+### SMOTE Oversampling
+![SMOTE_Oversampling1](https://user-images.githubusercontent.com/106631875/200724033-6a54f629-53b4-4f69-9fb0-6043960e4855.png)
+
+![SMOTE_Oversampling2](https://user-images.githubusercontent.com/106631875/200724052-49fe8cf3-4ddb-4769-bbfe-ba7623a4ceb4.png)
+
+### Undersampling
+![Undersampling1](https://user-images.githubusercontent.com/106631875/200724095-b4a120b4-5e98-461d-b37e-a727c34af39d.png)
+
+![Undersampling2](https://user-images.githubusercontent.com/106631875/200724107-45c32459-22f3-4967-88fc-bba89b0888e9.png)
+
+### Combination (Over and Under) Sampling
+![CombinationOverUnder_Sampling](https://user-images.githubusercontent.com/106631875/200724150-197c06a2-250c-47e4-a414-784e97da87f5.png)
+![CombinationOverUnder_Sampling2](https://user-images.githubusercontent.com/106631875/200724166-80593612-ff45-492f-ab4b-df83acb58159.png)
 
 ## Refined Results
 

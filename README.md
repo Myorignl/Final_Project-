@@ -38,6 +38,8 @@ Models and Strategies used include the following:
 
 ## Initial Results
 
+### Linear Regression
+
 The initial results yeilded a high accuracy score as shown below.
 
 <img width="280" alt="Results_initial_with_APOT" src="https://user-images.githubusercontent.com/106631875/198458856-32057196-dba0-4c56-a9f5-d336ece950a0.png">

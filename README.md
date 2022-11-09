@@ -203,6 +203,8 @@ There are no firm conclusions at this point except that more research needs to b
 4. Steven 
    * Machine Learning Models: SkiKit-Learn
    * Data Cleaning for ML models
+   
+   [Balanced Random Forest Model .IPYNB](https://github.com/Myorignl/Final_Project7/blob/Steven/final_project_easy_ensemble_adaboost_hospital_280_All_new.ipynb)
 
 ## Team Roles & Communication Protocols (Deliverable 2)
 

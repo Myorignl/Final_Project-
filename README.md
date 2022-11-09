@@ -218,6 +218,8 @@ Dorthy developed the Google Slides Storyboard outlining the overall project, whi
 
 3. Matt 
 
+Matt created queries to generate data specific tables to run through the machine learning models. Some of the queries included generating random samples of 10,000 and 50,000 rows. There were also queries used to round out the values of time and numbers equivalent to each month of the calendar year by using extract and to_char functions. Another set of queries generated was grouping the data by specific seasons of the year by chunks of 3 months.
+
 4. Steven 
 
 Steven attempted to rerun the machine learning model using datasets of various sample sizes, 1 dataset with 50000 rows, 1 dataset with 1000 rows, 1 dataset with 10000 rows, and finally 1 dataset with rows specific to one Hospital. He tried multiple dataset sizes to see if the amount of rows would increase the accuracy or F1 score, and the same reasoning was applied to the dataset specific to one hospital. The accuracy and F1 score varied only slightly in either direction, but none of the datasets seemed to influence the results as one might have expected. After discussing these results with the group, it was then determined that a new dataset would need to be created by Matt, that would provide a random sample of 10000 rows from the entire 500K dataset. The results of using this new random sample dataset was consistent with prior results (see below).

@@ -55,3 +55,24 @@ from Final_EMS where extract(month from pickup_date) between 7 and 9
 select id, hospital_code, pickup_date, arrival_time, apot, impression 
 from Final_EMS where extract(month from pickup_date) between 10 and 12
              and extract(year from pickup_date) between 2017 and 2021;
+
+-- Queries the database with rounded date/time values
+select hospital_code, apot, impression, 
+extract(month from pickup_date),
+extract(year from pickup_date),
+to_char(pickup_date, 'YYYY-MM'),
+extract(hour from arrival_time)
+from Final_EMS;  
+
+--Queries a random sample of 10,000 rows
+select * from Final_EMS ORDER BY random() limit 10000;
+
+--Queries a random sample of 50,000 rows
+select * from Final_EMS ORDER BY random() limit 50000;
+
+--Queries all the data for hospital_code 280
+select * from Final_EMS where hospital_code=280
+
+--Queries a random sample of data for hospital_code 280
+select * from Final_EMS where hospital_code=280
+order by random() limit 10000;

@@ -18,6 +18,19 @@ Queries used to filter the data from 2017-2021 but only specific month ranges fo
 
 ![image](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
 
+Query used to round the date/time values.
+
+![image](https://user-images.githubusercontent.com/86776606/200743333-5f59a86d-d09a-4162-8510-8d82b13d1620.png)
+
+Queries used to generate random samples of 10,000 and 50,000 rows.
+
+![image](https://user-images.githubusercontent.com/86776606/200743422-762c31a1-d0f2-4efb-90a6-065763178ad8.png)
+
+Queries used to generate data specifically for hospital_code 280.
+
+![image](https://user-images.githubusercontent.com/86776606/200743477-262d4c38-52c2-488e-8d51-44687e9caa5c.png)
+
+
 Here is a rough ERD diagram to show the relations between our different tables
 
 ![EMS_ERD_Diagram](https://user-images.githubusercontent.com/86776606/198749633-41fd7d42-7110-4a8e-b294-373a8798499b.png)

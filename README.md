@@ -181,7 +181,7 @@ The updated Status buckets were changed to:
 ('3 (>121-180min)')
 ('4 (>181 min)')
 
-[Results_no_APOT](https://user-images.githubusercontent.com/106631875/198459162-8f3f9024-ce6b-434c-a962-a155c8a237fe.png)
+![Results_no_APOT](https://user-images.githubusercontent.com/106631875/198459162-8f3f9024-ce6b-434c-a962-a155c8a237fe.png)
 
 Looking closer at the top 5 features, there seemed to be a strong relationship with the APOT (wait time). Upon closer examination, the top 5 features appear to be related. After further pre-processing our data, the model was run again with the index (renamed id), hospital code, lat and long dropped. 
 

@@ -18,7 +18,7 @@ The data selected for this project was obtained from Sacramento County Emergency
   - Destination Hospital location Latitude and Longitude 
   - Date/Time Timestamp of Occurrence
   - Ambulance Patient Offload Time (APOT)
-  - Impression (Paramedic Impression of Patient Medical Complaint)depicted as [ICD-10 code](https://www.icd10data.com) an ICD-10 code is is a classification system of     diagnosis codes representing conditions and diseases, related health problems, abnormal findings, signs and symptoms, injuries, and external causes of injuries         and diseases.
+  - Impression (Paramedic Impression of Patient Medical Complaint) depicted as [ICD-10 code](https://www.icd10data.com). An ICD-10 code is is a classification system       of diagnosis codes representing conditions and diseases, related health problems, abnormal findings, signs and symptoms, injuries, and external causes of injuries     and diseases.
   - Ambulance Agency Identifier 
   - Ambulance Unit identifier 
   - Postal Code of Where call was Originated 

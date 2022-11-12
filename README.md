@@ -47,13 +47,17 @@ Time frame:
   * Repository Created with individual branches for each team member
   * Assigned team member handling merges into the main branch 
   * Each individual is responsible to submit required commits into their repository by due date
+ 
+## Storyboard 
 
-## Dashboard 
+[Google Slides](https://github.com/Myorignl/Final_Project7/blob/main/Final%20Project%20Segment%202%20Slides.pdf)
 
-* Storyboard: [Google Slides](https://github.com/Myorignl/Final_Project7/blob/main/Final%20Project%20Segment%202%20Slides.pdf)
+## Dashboard (Bethany) 
 
 * Tools Used to Create Final Dashboard: 
   * Tableau
+  * HTML
+  * Javascript
 
 By using the EMS dataset, we will show the relationship of ICD impression codes v. Hospital Code, ICD impression codes v. APOT times, Hospital Code v. APOT times. These relationships will be illustrated graphically, in which users can explore the data using applied filters on each chart. By looking at each chart, the user should be able to understand the reasoning behind why these features were chosen for our machine learning model. For example, when looking at the 'Hospital code v. APOT Times' bar chart, there is a variation of APOT times depending on the hospital, which begs the question, 'Why would the APOT times be higher at one hospital versus another? Does the type of ICD impression influence the APOT times? Or, do some hospitals receive more of one type of ICD impression than another, and is that what it influencing the APOT times?'. 
 
@@ -64,6 +68,10 @@ By using the EMS dataset, we will show the relationship of ICD impression codes 
 * Other Dashboard Elements: 
   * Confusion Matrix Table 
   * Machine Learning Model Results Table: Accuracy Score, F1 Score, Ranking Importance of Features
+  
+![EMS Home Page](https://github.com/Myorignl/Final_Project7/blob/Bethany/EMS_JavaScript_Bethany/vCharts_WebPg1_Bethany.png)
+
+![EMS Maps Tab Page](https://github.com/Myorignl/Final_Project7/blob/Bethany/EMS_JavaScript_Bethany/vMaps_WebPg2_Bethany.png)
 
 ## Database 
 

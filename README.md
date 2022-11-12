@@ -190,6 +190,70 @@ Looking closer at the top 5 features, there seemed to be a strong relationship w
 
 There are no firm conclusions at this point except that more research needs to be done. However, there does seem to be a strong relationship between the hospital code and APOT (wait time). Beyond the machine learning models that were run, a linear regression model with a dependent variable of time of day and the independent variable of APOT (wait time) revealed a strong relationship to the time of day and duration of the wait time.
 
+### Machine Learning (Bethany & Steven - Deliverable 3)
+
+* Description of data preprocessing  
+
+The data preprocessing portion of the project has been one of the greatest takeaways and lessons learned while completing this project. Initially we did the basic preprocessing of cleaning the data by dropping null values, converting data to numerical values and using the get.dummies method.  
+ 
+One of our initial assumptions was that if we had a lot of data, it would make the accuracy of our models better. However after running several machine learning models, we realized this wasn’t necessarily true. While our initial accuracy scores were high, we eventually realized we were experiencing an example of the “garbage in, garbage out” concept in computer science (GIGO). 
+ 
+We had extra columns that did not contribute to outcome of the model and we also had columns that were essentially double counting data and creating artificially higher accuracy scores. These were unnecessary columns that did not benefit the predictability of the model. 
+ 
+The Balanced Random Forest Classifier model contributed a lot to our ability to recognize which features or columns were actually relevant to our target.   
+ 
+* Description of feature engineering and the feature selection, including the decision-making process  
+
+We relied heavily on the ability of the Balanced Random Forest Classifier model to quantify the impact of various datapoints on predicting our outcome/target. Each time we ran the model we were able to re-examine which datapoints were having the biggest impact and should be included in the dataset.   
+
+While the Balanced Random Forest Classifier model gave us a lot of insight into the feature importances of our data and proved to be invaluable because of that, it didn’t ultimately provide the best results. After more preprocessing and refining our data, the Gradient Boosting Classifier model provided the best results.  
+
+ * Our initial columns for our dataset were:  
+   * Index, Record, ID, Hospital_Code, Date, APOT, Impression, Postal_Code, AgencyNumber, Agency_Unit, Latitude, Longitude and Status.  
+
+ * After preprocessing and refining, our dataset became:  
+   * arrival_hour, pickup_date_num, apot_num, hospital_num and impressions_num  
+ 
+* Description of how data was split into training and testing sets  
+ 
+
+The feature set was defined by dropping the “apot_num” column and setting the target. The data was then split into the training and testing sets. We created an instance of the StandardScaler and fit the scaler with the training set and scaled the data. 
+
+* Explanation of model choice, including limitations and benefits  
+
+We attempted to run our data through a majority of the supervised models from module 17, including:  
+
+* Linear Regression  
+* Balanced Random Forest Classifier  
+* Easy Ensemble AdaBoost Classifier  
+* Oversampling  
+* SMOTE Oversampling  
+* Undersampling  
+* Combination (Over and Under) Sampling  
+ 
+As we looked at the results, we realized that in some instances, our particular dataset was not suited for the model. In most cases, the accuracy scores were similar. As mentioned above, the Balanced Random Forest Classifier model didn’t provide the best results, but it’s feature importances capabilities gave us greater insight on which data had the biggest impact on predicting our outcome/target. Through trial and error we found our best results with the Gradient Boosting Classifier model.  
+
+* Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)  
+
+In segments 1 and 2, we relied heavily on the Balanced Random Forest Classifier model. After refining our data, we tried the Gradient Boosting Classifier and it provided the best results.  
+* Description of how they have trained the model thus far, and any additional training that will take place  
+
+We have worked with various sample sizes of our data through the preprocessing, refining and training phases and we have additional data that we can run to test the model’s ability to predict our outcome/target.  
+
+* Description of current accuracy score  
+The accuracy score of the Gradient Boosting Classifier model is 0.68.   
+The results of the confusion matrix are below:  
+  
+* The feature importances are provided below:  
+
+The feature importances seem to focus mainly on the hospital_num (0.617) and arrival_hour (=0.225).   
+  
+* Additionally, the model obviously addresses the question or problem the team is solving.  
+
+With a reasonable degree of certainty, the model is capable of predicting long APOTs (original question). By using multiple machine learning models, we have also gained a new understanding of what were initially thought to have the biggest impacts on high APOTs. It was initially thought that the impression (trauma, injury or medical event) would have a significant impact on predicting high APOTs. However the models revealed that the particular hospital and arrival time of day and day of the week had the biggest impact. This is likely due to certain hospitals having more traffic or being busier than others in general, perhaps due to their location/convenience to city centers, or their capacity to treat a greater spectrum of emergencies and convenience to walk-in emergencies. Arrival time and day of the week are also likely tied to hospital traffic which will have a direct impact on APOTs.   
+  
+As much as the machine learning has provided answers to our original question, it has also shed light on additional data that could be relevant to achieving a higher accuracy score. Hospital staffing numbers, capacity and walk-in numbers could all potentially contribute to a higher degree of accuracy. 
+
 
 ## Team Roles & Communication Protocols (Deliverable 1) 
 

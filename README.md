@@ -50,7 +50,7 @@ Time frame:
  
 ## Storyboard 
 
-[Google Slides](https://github.com/Myorignl/Final_Project7/blob/main/Final%20Project%20Segment%202%20Slides.pdf)
+[Google Slides](https://docs.google.com/presentation/d/15tdSq3N0yPYTAy1F1tbo_GxqV1TnYJuH_rWZqTuRxU8/edit#slide=id.p1)
 
 ## Dashboard (Bethany - Deliverable 3) 
 

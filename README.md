@@ -18,7 +18,7 @@ The data selected for this project was obtained from Sacramento County Emergency
   - Destination Hospital location Latitude and Longitude 
   - Date/Time Timestamp of Occurrence
   - Ambulance Patient Offload Time (APOT)
-  - Patient Complaint identifier
+  - Impression (Paramedic Impression of Patient Medical Complaint)depicted as [ICD-10 code](https://www.icd10data.com) an ICD-10 code is is a classification system of     diagnosis codes representing conditions and diseases, related health problems, abnormal findings, signs and symptoms, injuries, and external causes of injuries         and diseases.
   - Ambulance Agency Identifier 
   - Ambulance Unit identifier 
   - Postal Code of Where call was Originated 
@@ -32,7 +32,7 @@ The data selected for this project was obtained from Sacramento County Emergency
 
 ### Dataset Questions  
 
-  - Which impressions (Paramedic Impression of Medical Complaint) has the longest/shortest APOTs? (Overall and by Hospital codes)
+  - Which impressions (Paramedic Impression of Patient Medical Complaint) has the longest/shortest APOTs? (Overall and by Hospital codes)
   - Which Postal Codes have the highest/lowest rates of which impressions? 
   - Which Postal Codes utilize ambulance transports to the ER the most in 2017-2022?
   - Wait times per hospital by date/time 

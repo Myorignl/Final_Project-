@@ -127,19 +127,19 @@ Models and Strategies used include the following:
 
 Below is a sample of some of the errors that were incurred when cleaning our data:
 
-[Error_Caps_v_Lowercase](https://user-images.githubusercontent.com/106631875/198457801-96c943f4-6987-47b1-81e5-d88baf240310.png)
+<img width="130" alt="Error_Caps_v_Lowercase" src="https://user-images.githubusercontent.com/106631875/201451633-983b1621-e2a7-45df-97e9-8b2355d8c148.png">
 
 The error above revealed a conflict between the same data that was in all CAPS vs Upper and lowercase. This was an easy fix which was resolved by creating consistent naming conventions.
 
-[Error_Date_String_to_Float](https://user-images.githubusercontent.com/106631875/198457877-aa58eab0-633d-4d26-a691-4f4b420f33bf.png)
+<img width="247" alt="Error_Date_String_to_Float" src="https://user-images.githubusercontent.com/106631875/201451650-8de9afdd-72de-4a8a-9e0d-5f47afc44bb0.png">
 
 The error above revealed that the date values were string data types instead of float which meant we needed to convert the data type.
 
-[Error_string_to_float](https://user-images.githubusercontent.com/106631875/198458098-74aaef3e-d22e-4e83-be56-acb80340098a.png)
+<img width="335" alt="Error_string_to_float" src="https://user-images.githubusercontent.com/106631875/201451669-99de110e-99ff-4564-b619-295d5faddb35.png">
 
 The error above revealed that we had a column of data that was a mix of numerical values and alphanumerical values. After looking at the relationship between the columns, it was determined that the value of the column could be dropped since it was referenced by an adjacent value.
 
-[Error_over_116k_rows](https://user-images.githubusercontent.com/106631875/198457945-a35ec117-f759-4c4c-9319-5f82c43b07a2.png)
+![Error_over_116k_rows](https://user-images.githubusercontent.com/106631875/201451734-acd1721e-56ef-4b57-8555-c7a418213ad0.png)
 
 The error above revealed a limitation which is addressed below. The dataset was too large to work with and we are seeking an alternative solution. 
 

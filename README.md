@@ -190,7 +190,7 @@ Looking closer at the top 5 features, there seemed to be a strong relationship w
 
 There are no firm conclusions at this point except that more research needs to be done. However, there does seem to be a strong relationship between the hospital code and APOT (wait time). Beyond the machine learning models that were run, a linear regression model with a dependent variable of time of day and the independent variable of APOT (wait time) revealed a strong relationship to the time of day and duration of the wait time.
 
-### Machine Learning (Bethany & Steven - Deliverable 3)
+## Machine Learning (Bethany & Steven - Deliverable 3)
 
 * Description of data preprocessing  
 

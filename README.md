@@ -48,7 +48,7 @@ Time frame:
   * Assigned team member handling merges into the main branch 
   * Each individual is responsible to submit required commits into their repository by due date
  
-## Storyboard 
+## Storyboard (Dorthy)
 
 [Google Slides](https://docs.google.com/presentation/d/15tdSq3N0yPYTAy1F1tbo_GxqV1TnYJuH_rWZqTuRxU8/edit#slide=id.p1)
 
@@ -272,6 +272,7 @@ As much as the machine learning has provided answers to our original question, i
 2. Dorthy 
    * Data extraction & cleaning 
    * Presentation & structure
+   * Tableau
 
 3. Matt 
    * PostgreSQL setup and database storage

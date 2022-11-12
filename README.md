@@ -10,6 +10,22 @@ Ambulance Patient Offload Times for Sacramento County Hospitals. Develop a regre
 
 Extended Ambulance Patient Offload Times create idle ambulances that could be needed for emergencies on the road but are instead waiting for their patient to be placed in an ED bed. When an ambulance crew is awaiting placement, they are unable to respond to another emergency call. There are numbered ambulance resources for Sacramento County and lack of unit availability due to APOT translates into longer EMS responses to the detriment of the community.
 
+### Data Set
+
+The data selected for this project was obtained from Sacramento County Emergency Medical Services Agency. Data is obtained from records created by transpoting ambulance crew and submtted to a patient data repository for the state of California. The data set includes the following data points : 
+
+  - Destination Hospital identifier
+  - Destination Hospital location Latitude and Longitude 
+  - Date/Time Timestamp of Occurrence
+  - Ambulance Patient Offload Time (APOT)
+  - Patient Complaint identifier
+  - Ambulance Agency Identifier 
+  - Ambulance Unit identifier 
+  - Postal Code of Where call was Originated 
+  
+![image](https://user-images.githubusercontent.com/104601282/201459420-e9bc091c-a0c6-4fc3-8c4b-001e1fb77c1d.png)
+
+
 ### Audience
 
 * Hospital staff and Ambulance Drivers. 

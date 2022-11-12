@@ -242,7 +242,8 @@ We have worked with various sample sizes of our data through the preprocessing, 
 
 * Description of current accuracy score  
 The accuracy score of the Gradient Boosting Classifier model is 0.68.   
-The results of the confusion matrix are below:  
+
+* The results of the confusion matrix are below:  
 
 ![confusionmatrix](https://user-images.githubusercontent.com/106631875/201450484-804a154f-0b5d-4c84-bb8d-d38c25142c3d.png)
 

@@ -241,6 +241,7 @@ In segments 1 and 2, we relied heavily on the Balanced Random Forest Classifier 
 We have worked with various sample sizes of our data through the preprocessing, refining and training phases and we have additional data that we can run to test the model’s ability to predict our outcome/target.  
 
 * Description of current accuracy score  
+
 The accuracy score of the Gradient Boosting Classifier model is 0.68.   
 
 * The results of the confusion matrix are below:  

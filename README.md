@@ -16,9 +16,9 @@ Extended Ambulance Patient Offload Times create idle ambulances that could be ne
 
 ### Dataset Questions  
 
-  - Which impressions has the longest/shortest APOTs? (Overall and by Hospital codes)
-  - Compare impressions to zip codes. Which zip codes have the highest/lowest rates of which impressions? 
-  - Which zip codes utilize ambulance transports to the ER the most in 2017-2022?
+  - Which impressions (Paramedic Impression of Medical Complaint)  has the longest/shortest APOTs? (Overall and by Hospital codes)
+  - Which Postal Codes have the highest/lowest rates of which impressions? 
+  - Which Postal Codes utilize ambulance transports to the ER the most in 2017-2022?
   - Wait times per hospital by date/time 
   - Do any patterns arise from the data? 
 

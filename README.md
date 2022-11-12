@@ -23,8 +23,6 @@ The data selected for this project was obtained from Sacramento County Emergency
   - Ambulance Unit identifier 
   - Postal Code of Where call was Originated 
   
-![image](https://user-images.githubusercontent.com/104601282/201459420-e9bc091c-a0c6-4fc3-8c4b-001e1fb77c1d.png)
-
 
 ### Audience
 
@@ -89,7 +87,7 @@ By using the EMS dataset, we will show the relationship of ICD impression codes 
 
 ![EMS Maps Tab Page](https://github.com/Myorignl/Final_Project7/blob/Bethany/EMS_JavaScript_Bethany/vMaps_WebPg2_Bethany.png)
 
-## Database 
+## Database (Matt)
 
 The database selected is Structured Query Language (SQL). The use of this database will allow the creation of subsets / tables of the original csv file. Setup of the table has been accomplished by the assigned team member, tables have been generated as requested. 
 
@@ -126,7 +124,7 @@ Queries used to filter the data from 2017-2021 but only specific month ranges fo
 
 [Bethany Filtered Queries](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
 
-## Machine Learning 
+## Machine Learning (Steven & Bethany)
 
 SkiKit-Learn is the selected Machine Learning Module that will be used during this project. The hosting platform will be utilized on Github.
 Models and Strategies used include the following:
@@ -309,7 +307,7 @@ Bethany attempted to produce an interactive webpage using Javascript, but the .j
 
 2. Dorthy 
 
-Dorthy developed the Google Slides Storyboard outlining the overall project, which includes the selected topic, the reason the topic was selected, the description of the source of data, the questions that the team hopes to answer with the data, a description of the data exploration phase of the project, and the description of the analysis phase of the project. Dorthy then asked Bethany and Steve to update the 'Data Analysis' portion of the google slides with the current results found within the machine learning model results and the process of how the testing and training sets were created within the code, as well as updating the Confusion matrix table found on the dashboard template slide. 
+Dorthy developed the Google Slides Storyboard outlining the overall project, which includes the selected topic, the reason the topic was selected, the description of the source of data, the questions that the team hopes to answer with the data, a description of the data exploration phase of the project, and the description of the analysis phase of the project. Dorthy then asked Bethany and Steve to update the 'Data Analysis' portion of the google slides with the current results found within the machine learning model results and the process of how the testing and training sets were created within the code, as well as updating the Confusion matrix table found on the dashboard template slide. Dorthy created the Maps in Tableau illustrating the variation of APOT times per hospital by times with the primary impressions listed for each hospial in view.  
 
 3. Matt 
 

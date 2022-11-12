@@ -272,7 +272,7 @@ As much as the machine learning has provided answers to our original question, i
 2. Dorthy 
    * Data extraction & cleaning 
    * Presentation & structure
-   * Tableau
+
 
 3. Matt 
    * PostgreSQL setup and database storage

@@ -151,18 +151,18 @@ Our dataset included over 500k rows of data which ended up being more than the m
 
 The initial results yielded a high accuracy score =0.988, as shown below:
 
-[Results_initial_with_APOT](https://user-images.githubusercontent.com/106631875/198458856-32057196-dba0-4c56-a9f5-d336ece950a0.png)
+<img width="280" alt="Results_initial_with_APOT" src="https://user-images.githubusercontent.com/106631875/201452059-4116d085-d270-4aac-90cb-4efd4ef30f21.png">
 
 After running the models listed above, the Balanced Random Forest model resulted in a higher accuracy and F1 score than the other models tested. The model indicated that there is strong relationship between the Status (wait time) and the 5 top feature importances.  
 
-[Results_importances_initial](https://user-images.githubusercontent.com/106631875/198458636-c720af18-6a64-4216-85d5-93bd58d7e2b8.png)
+![Results_importances_initial](https://user-images.githubusercontent.com/106631875/201452087-e29df898-1a0b-4ebc-a273-ee2f043038f6.png)
 
 ### Refined Results
 
 After reviewing the results and re-examining the data, it was noted that the previous Status buckets columns were too closely related and may be skewing the results. Thus, we updated the Status buckets and refined the buckets, to more specific time buckets, in hopes that would take care of possible overfitting.
 In an effort to refine the results, we dropped the APOT (wait time) column which reduced the accuracy but in theory gave a truer value. 
 
-[Target Column Values](https://github.com/Myorignl/Final_Project7/blob/Bethany/input_labels_tabledata.png)
+![Target Column Values](https://github.com/Myorignl/Final_Project7/blob/Bethany/input_labels_tabledata.png)
 
 The previous Status buckets used: 
 

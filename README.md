@@ -52,7 +52,7 @@ Time frame:
 
 [Google Slides](https://github.com/Myorignl/Final_Project7/blob/main/Final%20Project%20Segment%202%20Slides.pdf)
 
-## Dashboard (Bethany) 
+## Dashboard (Bethany - Deliverable 3) 
 
 * Tools Used to Create Final Dashboard: 
   * Tableau

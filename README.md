@@ -145,7 +145,7 @@ There are no firm conclusions at this point except that more research needs to b
 
 ## Machine Learning (Bethany & Steven - Deliverable 3)
 
-* Description of data preprocessing  
+### Description of data preprocessing  
 
 The data preprocessing portion of the project has been one of the greatest takeaways and lessons learned while completing this project. Initially we did the basic preprocessing of cleaning the data by dropping null values, converting data to numerical values and using the get.dummies method. The accuracy and F1 scores seemed to remain on the lower side, of around 0.53 or so, when including extra columns, such as: 'agencynumber', 'agency_unit', 'postal_code', 'latitude', and 'longitude'. One of our initial assumptions was that if we had a lot of data, it would make the accuracy of our models better. However after running several machine learning models, we realized this wasn’t necessarily true. It was determined that for the machine learning portion, these columns did not add anything valuable to the models and its predictability of APOT times. For example, the 'hospital_code' column and the 'latitude' and 'longitude' columns were providing the same information, because the lat/long points were providing the location of the hospital, which was already identified from the hospital code number, thus, we dropped the lat/long columns. Once those columns were removed, the accuracy scores increased substantially in both the Balanced Random Forest Classifier model and the Gradient Boosting model. 
  
@@ -155,9 +155,13 @@ The data preprocessing portion of the project has been one of the greatest takea
  * After preprocessing and refining, our dataset became:  
    * arrival_hour, pickup_date_num, apot_num, hospital_num and impressions_num   
  
-* Description of feature engineering and the feature selection, including the decision-making process  
+### Description of feature engineering and the feature selection, including the decision-making process  
 
 Initially, it was thought that by using the label_encoder function on all of the columns that could not be easily converted into an integer, due to having mixed datatypes in the values themselves, was the appropriate solution. Although, after further discussion, this actually didn't make sense because this was just resulting in large ranges of numbers that separated the rest of the data points so much that it looked as though there was no correlation between any of the columns in the dataset. The next thing that we tried was to separate the date/time columns into month, day, year, hours, and minutes. Out of all of these columns, the arrival hour was the only feature importance that showed any significance. In order to keep track of what hospital code went with what numeric value, a dictionary was created and used to assign a specific number to each hospital code, in which a lambda function was applied to the dataframe that would replace each hospital code with its assigned number. This was another reason as to why the .get_dummies method was not used instead, because that method would assign a number randomly, which would prevent us from determining which hospital code went with the randomly assigned number.
+
+The final features selected and their associated values are shown below: 
+
+![Updated feature engineering](https://github.com/Myorignl/Final_Project7/blob/Bethany/cleaned_data_gradient_boosting.png)
 
 We relied heavily on the ability of the Balanced Random Forest Classifier model to quantify the impact of various datapoints on predicting our outcome/target. Each time we ran the model we were able to re-examine which datapoints were having the biggest impact and should be included in the dataset. The determination of what feature importances did not contribute much to the model's predictability, was found using the function: sorted(zip(rf_model.feature_importances, X.columns), reverse=True). The feature importances that resulted in values so low, that the values were basically zero, was a main indicator that most of the columns that were initially used in the model, was a possible reason why the accuracy scores were low. After dropped those columns, and re-running the model, the accuracy and F1 scores increased. 
 
@@ -166,7 +170,7 @@ While the Balanced Random Forest Classifier model gave us a lot of insight into 
 2. F1 Score (Predicted 0): 0.77
 3. F1 Score (Predicted 1): 0.50
 
-* Description of how data was split into training and testing sets  
+### Description of how data was split into training and testing sets  
  
 The feature set was defined by dropping the “apot_num” column and setting the target. The data was then split into the training and testing sets. We created an instance of the StandardScaler and fit the scaler with the training set and scaled the data. After running the GradientBoostingClassifier model, the learning rates were evaluated, and the learning rate of 0.75 was determined to be the rate that would provide the highest accuracy score for the testing sets. This was because the training and validation accuracy scores resulted in the highest scores compared to the other learning rates. 
 
@@ -189,7 +193,7 @@ The updated Status buckets were changed to:
 * Extreme
 ('1 (>20.50min)')
 
-* Explanation of model choice, including limitations and benefits  
+### Explanation of model choice, including limitations and benefits  
 
 We attempted to run our data through a majority of the supervised models from module 17, including:  
 
@@ -203,28 +207,29 @@ We attempted to run our data through a majority of the supervised models from mo
  
 Oversampling, SMOTE over- and undersampling, Combination over- and undersampling was run with our initial dataset, as well as with our updated dataset, but both run throughs yielded low accuracy scores of about 0.50 or lower. Thus, it was decided that these models were incompatible with our dataset and the goal of this project.
 
-* Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)  
+### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)  
 
 In segments 1 and 2, we relied heavily on the Balanced Random Forest Classifier model. After refining our data, we tried the Gradient Boosting Classifier and it provided the best results.  
-* Description of how they have trained the model thus far, and any additional training that will take place  
+
+### Description of how they have trained the model thus far, and any additional training that will take place  
 
 We have worked with various sample sizes of our data through the preprocessing, refining and training phases and we have additional data that we can run to test the model’s ability to predict our outcome/target.  
 
-* Description of current accuracy score  
+### Description of current accuracy score  
 
 The accuracy score of the Gradient Boosting Classifier model is 0.68.   
 
-* The results of the confusion matrix are below:  
+### The results of the confusion matrix are below:  
 
 ![confusionmatrix](https://user-images.githubusercontent.com/106631875/201450484-804a154f-0b5d-4c84-bb8d-d38c25142c3d.png)
 
-* The feature importances are provided below:  
+### The feature importances are provided below:  
 
 ![feature_importances](https://user-images.githubusercontent.com/106631875/201450494-2b94ea00-e589-43d2-9d50-2cf2eaf250bd.png)
 
 The feature importances seem to focus mainly on the hospital_num (=0.617) and arrival_hour (=0.225).   
   
-* Additionally, the model obviously addresses the question or problem the team is solving.  
+### How the model addresses the question or problem the team is solving.  
 
 With a reasonable degree of certainty, the model is capable of predicting long APOTs (original question). By using multiple machine learning models, we have also gained a new understanding of what were initially thought to have the biggest impacts on high APOTs. It was initially thought that the impression (trauma, injury or medical event) would have a significant impact on predicting high APOTs. However the models revealed that the particular hospital and arrival time of day and day of the week had the biggest impact. This is likely due to certain hospitals having more traffic or being busier than others in general, perhaps due to their location/convenience to city centers, or their capacity to treat a greater spectrum of emergencies and convenience to walk-in emergencies. Arrival time and day of the week are also likely tied to hospital traffic which will have a direct impact on APOTs.   
   

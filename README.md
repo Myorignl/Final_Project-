@@ -68,6 +68,8 @@ Time frame:
 
 ## Dashboard (Bethany - Deliverable 3) 
 
+[View EMS Dashboard](https://myorignl.github.io/Final_Project7/)
+
 * Tools Used to Create Final Dashboard: 
   * Tableau
   * HTML

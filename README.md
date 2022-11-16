@@ -53,7 +53,7 @@ Time frame:
 * Tableau
 * PostgreSQL
 * SciKit-Learn Libraries
-* Undetermined Which to Use: Tableau or User Interface 
+* Microsoft Excel 
 
 ## Github (Bethany)
 

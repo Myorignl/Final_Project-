@@ -39,11 +39,8 @@ The data selected for this project was obtained from Sacramento County Emergency
 ### Measuring metrics for ambulance patient offload times  
 
 Time frame: 
-* (<=20.49)
-* (>=20.50 to <=60.49)
-* (>=60.50 to <=120.49)
-* (<=120.50 to <=180.49)
-* (<=180.50)
+* (<=20.49 min) - Bucket 1
+* (>=20.50 min) - Bucket 2
 
 90th Percentile of APOT per Hour
 * Create array per hour by hospital and generate a 90th percentile
@@ -52,21 +49,26 @@ Time frame:
 
 * Jupyter Notebook & Pandas 
 * Visual Studio Code
+* JavaScript & HTML
+* Tableau
 * PostgreSQL
 * SciKit-Learn Libraries
-* Undetermined Which to Use: Tableau or User Interface 
+* Microsoft Excel 
 
-## Github
+## Github (Bethany)
 
   * Repository Created with individual branches for each team member
   * Assigned team member handling merges into the main branch 
   * Each individual is responsible to submit required commits into their repository by due date
+  * Update README.md (Bethany & Dorthy)
  
 ## Storyboard (Dorthy)
 
 [Google Slides](https://docs.google.com/presentation/d/15tdSq3N0yPYTAy1F1tbo_GxqV1TnYJuH_rWZqTuRxU8/edit#slide=id.p1)
 
 ## Dashboard (Bethany - Deliverable 3) 
+
+[View EMS Dashboard](https://myorignl.github.io/Final_Project7/)
 
 * Tools Used to Create Final Dashboard: 
   * Tableau
@@ -75,10 +77,13 @@ Time frame:
 
 By using the EMS dataset, we will show the relationship of ICD impression codes v. Hospital Code, ICD impression codes v. APOT times, Hospital Code v. APOT times. These relationships will be illustrated graphically, in which users can explore the data using applied filters on each chart. By looking at each chart, the user should be able to understand the reasoning behind why these features were chosen for our machine learning model. For example, when looking at the 'Hospital code v. APOT Times' bar chart, there is a variation of APOT times depending on the hospital, which begs the question, 'Why would the APOT times be higher at one hospital versus another? Does the type of ICD impression influence the APOT times? Or, do some hospitals receive more of one type of ICD impression than another, and is that what it influencing the APOT times?'. 
 
+The interactive dashboard was created using HTML and Javascript, and Tableau. The dashboard is hosted on a github webpage, and the charts created on Tableau were integrated into the .html file. The user can switch between a 'Visual Charts' tab and a 'Visual Maps' tab. The homepage contains 3 interactive charts, and a table breakdown of the predicted and actual results from the machine learning model. The 2nd page contains a heatmap that graphically displays each hospital and a rounded time element to view the moving average of impresion types and their associated APOT time averages. 
+
 * Interactive Elements: Applied filters on each chart 
   * ICD impression codes v. Hospital Code: Hospital Code Filter 
   * ICD impressions v. APOT Times: ICD impression Filter 
   * Hospital Code v. APOT Times: Hospital Code Filter
+  * Heatmap of Hospital codes, ICD impression types, and APOT averages for each impression type
 * Other Dashboard Elements: 
   * Confusion Matrix Table 
   * Machine Learning Model Results Table: Accuracy Score, F1 Score, Ranking Importance of Features
@@ -97,16 +102,9 @@ An ERD Diagram was also created as a reference for creating the database tables 
 ![image](https://user-images.githubusercontent.com/104601282/199882738-09efc61a-4915-499b-a875-90b186c29ef2.png)
 
 
-### *Example of Tables Created:* 
+### *Final Emergency Medical Services Table Created:* 
 
-[January to March 2017-2021 EMS Table 1](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JanMar_20172021_EMS_table.csv)
-
-[April to June 2017-2021 EMS Table 2](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/AprJun_20172021_EMS_table.csv)
-
-[July to September 2017-2021 EMS Table 3](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/JulSep_20172021_EMS_table.csv)
-
-[October to December 2017-2021 EMS Table 4](https://github.com/Myorignl/Final_Project7/blob/Bethany/CSV_file/EMS_table_groupby_month_range/OctDec_20172021_EMS_table.csv)
-
+[Final EMS Dataset](https://github.com/Myorignl/Final_Project7/blob/Matt/Resources/EMS_table_groupby_month_range.zip)
 
 Below is an example of our database used for querying our data.
 
@@ -120,22 +118,8 @@ Queries used to filter the data from 2017-2021 but only specific month ranges.
 
 [Filtered SQL Queries](https://user-images.githubusercontent.com/86776606/198159708-e7ea6b22-59a2-4785-b402-61366ac2193e.png)
 
-Queries used to filter the data from 2017-2021 but only specific month ranges for bethany_data, removing certain columns to test for user interface in javascript/html portion.
-
-[Bethany Filtered Queries](https://user-images.githubusercontent.com/86776606/198160003-77832b0d-e6c8-4ca4-b076-0dfcf453c39d.png)
 
 ## Machine Learning (Steven & Bethany)
-
-SkiKit-Learn is the selected Machine Learning Module that will be used during this project. The hosting platform will be utilized on Github.
-Models and Strategies used include the following:
-
-- Linear Regression
-- Balanced Random Forest Classifier
-- Easy Ensemble AdaBoost Classifier
-- Oversampling
-- SMOTE Oversampling
-- Undersampling
-- Combination (Over and Under) Sampling
 
 ### Pre-Processing, Data Cleaning, Errors and Solutions
 
@@ -157,35 +141,44 @@ The error above revealed that we had a column of data that was a mix of numerica
 
 The error above revealed a limitation which is addressed below. The dataset was too large to work with and we are seeking an alternative solution. 
 
-### Limitations
+### Preliminary Machine Learning Conclusions
 
-Our dataset included over 500k rows of data which ended up being more than the machine learning models code run on my computer. In order to continue working with the data, a smaller random sample of only 10000 rows was used with plans to run a larger set.
+There are no firm conclusions at this point except that more research needs to be done. However, there does seem to be a strong relationship between the hospital code and APOT (wait time). Beyond the machine learning models that were run, a linear regression model with a dependent variable of time of day and the independent variable of APOT (wait time) revealed a strong relationship to the time of day and duration of the wait time.
 
-### Initial Results
+## Machine Learning (Bethany & Steven - Deliverable 3)
 
-The initial results yielded a high accuracy score =0.988, as shown below:
+### Description of data preprocessing  
 
-<img width="280" alt="Results_initial_with_APOT" src="https://user-images.githubusercontent.com/106631875/201452059-4116d085-d270-4aac-90cb-4efd4ef30f21.png">
+The data preprocessing portion of the project has been one of the greatest takeaways and lessons learned while completing this project. Initially we did the basic preprocessing of cleaning the data by dropping null values, converting data to numerical values and using the get.dummies method. The accuracy and F1 scores seemed to remain on the lower side, of around 0.53 or so, when including extra columns, such as: 'agencynumber', 'agency_unit', 'postal_code', 'latitude', and 'longitude'. One of our initial assumptions was that if we had a lot of data, it would make the accuracy of our models better. However after running several machine learning models, we realized this wasn’t necessarily true. It was determined that for the machine learning portion, these columns did not add anything valuable to the models and its predictability of APOT times. For example, the 'hospital_code' column and the 'latitude' and 'longitude' columns were providing the same information, because the lat/long points were providing the location of the hospital, which was already identified from the hospital code number, thus, we dropped the lat/long columns. Once those columns were removed, the accuracy scores increased substantially in both the Balanced Random Forest Classifier model and the Gradient Boosting model. 
+ 
+ * Our initial columns for our dataset were:  
+   * Index, Record, ID, Hospital_Code, Date, APOT, Impression, Postal_Code, AgencyNumber, Agency_Unit, Latitude, Longitude and Status.  
 
-After running the models listed above, the Balanced Random Forest model resulted in a higher accuracy and F1 score than the other models tested. The model indicated that there is strong relationship between the Status (wait time) and the 5 top feature importances.  
+ * After preprocessing and refining, our dataset became:  
+   * arrival_hour, pickup_date_num, apot_num, hospital_num and impressions_num   
+ 
+### Description of feature engineering and the feature selection, including the decision-making process  
 
-![Results_importances_initial](https://user-images.githubusercontent.com/106631875/201452087-e29df898-1a0b-4ebc-a273-ee2f043038f6.png)
+Initially, it was thought that by using the label_encoder function on all of the columns that could not be easily converted into an integer, due to having mixed datatypes in the values themselves, was the appropriate solution. Although, after further discussion, this actually didn't make sense because this was just resulting in large ranges of numbers that separated the rest of the data points so much that it looked as though there was no correlation between any of the columns in the dataset. The next thing that we tried was to separate the date/time columns into month, day, year, hours, and minutes. Out of all of these columns, the arrival hour was the only feature importance that showed any significance. In order to keep track of what hospital code went with what numeric value, a dictionary was created and used to assign a specific number to each hospital code, in which a lambda function was applied to the dataframe that would replace each hospital code with its assigned number. This was another reason as to why the .get_dummies method was not used instead, because that method would assign a number randomly, which would prevent us from determining which hospital code went with the randomly assigned number.
 
-### Refined Results
+The final features selected and their associated values are shown below: 
 
-After reviewing the results and re-examining the data, it was noted that the previous Status buckets columns were too closely related and may be skewing the results. Thus, we updated the Status buckets and refined the buckets, to more specific time buckets, in hopes that would take care of possible overfitting.
-In an effort to refine the results, we dropped the APOT (wait time) column which reduced the accuracy but in theory gave a truer value. 
+![Updated feature engineering](https://github.com/Myorignl/Final_Project7/blob/Bethany/cleaned_data_gradient_boosting.png)
 
-![Target Column Values](https://github.com/Myorignl/Final_Project7/blob/Bethany/input_labels_tabledata.png)
+We relied heavily on the ability of the Balanced Random Forest Classifier model to quantify the impact of various datapoints on predicting our outcome/target. Each time we ran the model we were able to re-examine which datapoints were having the biggest impact and should be included in the dataset. The determination of what feature importances did not contribute much to the model's predictability, was found using the function: sorted(zip(rf_model.feature_importances, X.columns), reverse=True). The feature importances that resulted in values so low, that the values were basically zero, was a main indicator that most of the columns that were initially used in the model, was a possible reason why the accuracy scores were low. After dropped those columns, and re-running the model, the accuracy and F1 scores increased. 
+
+While the Balanced Random Forest Classifier model gave us a lot of insight into the feature importances of our data and proved to be invaluable because of that, it didn’t ultimately provide the best results. After more preprocessing and refining our data, the Gradient Boosting Classifier model provided the best results: 
+1. Accuracy score: 0.68
+2. F1 Score (Predicted 0): 0.77
+3. F1 Score (Predicted 1): 0.50
+
+### Description of how data was split into training and testing sets  
+ 
+The feature set was defined by dropping the “apot_num” column and setting the target. The data was then split into the training and testing sets. We created an instance of the StandardScaler and fit the scaler with the training set and scaled the data. After running the GradientBoostingClassifier model, the learning rates were evaluated, and the learning rate of 0.75 was determined to be the rate that would provide the highest accuracy score for the testing sets. This was because the training and validation accuracy scores resulted in the highest scores compared to the other learning rates. 
+
+Originally, the training and testing sets were broken up into 5 predicted and 5 actual buckets, but the results of the confusion matrix, showed that the majority of the predicted and actual determinations were dispersed into two of the 5 buckets. This illustrated to us that the model was best suited to predict whether a patient would be more likely to wait <20.49 min, or >20.50 min, depending on the arrival hour, thus the model was restructured to separating the 'apot' time buckets into two buckets, instead of five. 
 
 The previous Status buckets used: 
-
-* Benchmark
-('0 (<20min)')
-* Extreme
-('1 (>20.01min)')
-
-The updated Status buckets were changed to: 
 
 * Benchmark
 ('0 (<20min)')  
@@ -195,45 +188,14 @@ The updated Status buckets were changed to:
 ('3 (>121-180min)')
 ('4 (>181 min)')
 
-![Results_no_APOT](https://user-images.githubusercontent.com/106631875/198459162-8f3f9024-ce6b-434c-a962-a155c8a237fe.png)
+The updated Status buckets were changed to: 
 
-Looking closer at the top 5 features, there seemed to be a strong relationship with the APOT (wait time). Upon closer examination, the top 5 features appear to be related. After further pre-processing our data, the model was run again with the index (renamed id), hospital code, lat and long dropped. 
+* Benchmark
+('0 (<20.49min)')
+* Extreme
+('1 (>20.50min)')
 
-
-### Preliminary Machine Learning Conclusions
-
-There are no firm conclusions at this point except that more research needs to be done. However, there does seem to be a strong relationship between the hospital code and APOT (wait time). Beyond the machine learning models that were run, a linear regression model with a dependent variable of time of day and the independent variable of APOT (wait time) revealed a strong relationship to the time of day and duration of the wait time.
-
-## Machine Learning (Bethany & Steven - Deliverable 3)
-
-* Description of data preprocessing  
-
-The data preprocessing portion of the project has been one of the greatest takeaways and lessons learned while completing this project. Initially we did the basic preprocessing of cleaning the data by dropping null values, converting data to numerical values and using the get.dummies method.  
- 
-One of our initial assumptions was that if we had a lot of data, it would make the accuracy of our models better. However after running several machine learning models, we realized this wasn’t necessarily true. While our initial accuracy scores were high, we eventually realized we were experiencing an example of the “garbage in, garbage out” concept in computer science (GIGO). 
- 
-We had extra columns that did not contribute to outcome of the model and we also had columns that were essentially double counting data and creating artificially higher accuracy scores. These were unnecessary columns that did not benefit the predictability of the model. 
- 
-The Balanced Random Forest Classifier model contributed a lot to our ability to recognize which features or columns were actually relevant to our target.   
- 
-* Description of feature engineering and the feature selection, including the decision-making process  
-
-We relied heavily on the ability of the Balanced Random Forest Classifier model to quantify the impact of various datapoints on predicting our outcome/target. Each time we ran the model we were able to re-examine which datapoints were having the biggest impact and should be included in the dataset.   
-
-While the Balanced Random Forest Classifier model gave us a lot of insight into the feature importances of our data and proved to be invaluable because of that, it didn’t ultimately provide the best results. After more preprocessing and refining our data, the Gradient Boosting Classifier model provided the best results.  
-
- * Our initial columns for our dataset were:  
-   * Index, Record, ID, Hospital_Code, Date, APOT, Impression, Postal_Code, AgencyNumber, Agency_Unit, Latitude, Longitude and Status.  
-
- * After preprocessing and refining, our dataset became:  
-   * arrival_hour, pickup_date_num, apot_num, hospital_num and impressions_num  
- 
-* Description of how data was split into training and testing sets  
- 
-
-The feature set was defined by dropping the “apot_num” column and setting the target. The data was then split into the training and testing sets. We created an instance of the StandardScaler and fit the scaler with the training set and scaled the data. 
-
-* Explanation of model choice, including limitations and benefits  
+### Explanation of model choice, including limitations and benefits  
 
 We attempted to run our data through a majority of the supervised models from module 17, including:  
 
@@ -245,30 +207,31 @@ We attempted to run our data through a majority of the supervised models from mo
 * Undersampling  
 * Combination (Over and Under) Sampling  
  
-As we looked at the results, we realized that in some instances, our particular dataset was not suited for the model. In most cases, the accuracy scores were similar. As mentioned above, the Balanced Random Forest Classifier model didn’t provide the best results, but it’s feature importances capabilities gave us greater insight on which data had the biggest impact on predicting our outcome/target. Through trial and error we found our best results with the Gradient Boosting Classifier model.  
+Oversampling, SMOTE over- and undersampling, Combination over- and undersampling was run with our initial dataset, as well as with our updated dataset, but both run throughs yielded low accuracy scores of about 0.50 or lower. Thus, it was decided that these models were incompatible with our dataset and the goal of this project.
 
-* Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)  
+### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables)  
 
 In segments 1 and 2, we relied heavily on the Balanced Random Forest Classifier model. After refining our data, we tried the Gradient Boosting Classifier and it provided the best results.  
-* Description of how they have trained the model thus far, and any additional training that will take place  
+
+### Description of how they have trained the model thus far, and any additional training that will take place  
 
 We have worked with various sample sizes of our data through the preprocessing, refining and training phases and we have additional data that we can run to test the model’s ability to predict our outcome/target.  
 
-* Description of current accuracy score  
+### Description of current accuracy score  
 
 The accuracy score of the Gradient Boosting Classifier model is 0.68.   
 
-* The results of the confusion matrix are below:  
+### The results of the confusion matrix are below:  
 
 ![confusionmatrix](https://user-images.githubusercontent.com/106631875/201450484-804a154f-0b5d-4c84-bb8d-d38c25142c3d.png)
 
-* The feature importances are provided below:  
+### The feature importances are provided below:  
 
 ![feature_importances](https://user-images.githubusercontent.com/106631875/201450494-2b94ea00-e589-43d2-9d50-2cf2eaf250bd.png)
 
-The feature importances seem to focus mainly on the hospital_num (0.617) and arrival_hour (=0.225).   
+The feature importances seem to focus mainly on the hospital_num (=0.617) and arrival_hour (=0.225).   
   
-* Additionally, the model obviously addresses the question or problem the team is solving.  
+### How the model addresses the question or problem the team is solving.  
 
 With a reasonable degree of certainty, the model is capable of predicting long APOTs (original question). By using multiple machine learning models, we have also gained a new understanding of what were initially thought to have the biggest impacts on high APOTs. It was initially thought that the impression (trauma, injury or medical event) would have a significant impact on predicting high APOTs. However the models revealed that the particular hospital and arrival time of day and day of the week had the biggest impact. This is likely due to certain hospitals having more traffic or being busier than others in general, perhaps due to their location/convenience to city centers, or their capacity to treat a greater spectrum of emergencies and convenience to walk-in emergencies. Arrival time and day of the week are also likely tied to hospital traffic which will have a direct impact on APOTs.   
   

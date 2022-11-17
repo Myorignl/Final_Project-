@@ -145,7 +145,13 @@ The error above revealed a limitation which is addressed below. The dataset was 
 
 There are no firm conclusions at this point except that more research needs to be done. However, there does seem to be a strong relationship between the hospital code and APOT (wait time). Beyond the machine learning models that were run, a linear regression model with a dependent variable of time of day and the independent variable of APOT (wait time) revealed a strong relationship to the time of day and duration of the wait time.
 
-## Machine Learning (Bethany & Steven - Deliverable 3)
+## Machine Learning (Bethany & Steven - Deliverable 3 and Deliverable 4)
+
+[Gradient Boosting Jupyter Notebook](https://github.com/Myorignl/Final_Project7/blob/main/gradient_boosting_final_ems_BethanyAnalysis.ipynb)
+
+[Random Forest Jupyter Notebook](https://github.com/Myorignl/Final_Project7/blob/main/random_forest_final.ipynb)
+
+[Final Dataset Used For ML Models](https://github.com/Myorignl/Final_Project7/blob/main/all_data.csv)
 
 ### Description of data preprocessing  
 

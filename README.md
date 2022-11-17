@@ -80,11 +80,13 @@ By using the EMS dataset, we will show the relationship of ICD impression codes 
 The interactive dashboard was created using HTML and Javascript, and Tableau. The dashboard is hosted on a github webpage, and the charts created on Tableau were integrated into the .html file. The user can switch between a 'Visual Charts' tab and a 'Visual Maps' tab. The homepage contains 3 interactive charts, and a table breakdown of the predicted and actual results from the machine learning model. The 2nd page contains a heatmap that graphically displays each hospital and a rounded time element to view the moving average of impresion types and their associated APOT time averages. 
 
 * Interactive Elements: Applied filters on each chart 
+
   * ICD impression codes v. Hospital Code: Hospital Code Filter 
   * ICD impressions v. APOT Times: ICD impression Filter 
   * Hospital Code v. APOT Times: Hospital Code Filter
   * Heatmap of Hospital codes, ICD impression types, and APOT averages for each impression type
 * Other Dashboard Elements: 
+
   * Confusion Matrix Table 
   * Machine Learning Model Results Table: Accuracy Score, F1 Score, Ranking Importance of Features
   

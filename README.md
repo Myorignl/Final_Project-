@@ -64,7 +64,7 @@ Time frame:
  
 ## Storyboard (Dorthy)
 
-[Google Slides](https://docs.google.com/presentation/d/15tdSq3N0yPYTAy1F1tbo_GxqV1TnYJuH_rWZqTuRxU8/edit#slide=id.p1)
+[Google Slides](https://docs.google.com/presentation/d/1UqvI5kzO9aMRr0sbXCGmcrq875rGkxElag-CMgaynmM/edit#slide=id.p4)
 
 ## Dashboard (Bethany - Deliverable 3) 
 

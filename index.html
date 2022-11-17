@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./static/js/data.js" defer></script>
+    <title>EMS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    <ul class="tabs">
+        <li data-tab-target="#charts" class="active tab">Visual Charts</li>
+        <li data-tab-target="#maps" class="tab">Visual Maps</li>
+    </ul>
+    <div class="tab-content">
+        <div id="charts" data-tab-content class="active">        
+        <div class="container" style="background-color:rgba(35, 28, 169, 0.794)">
+            <div class="row">
+                <div class="col-md-12 jumbotron text-center" style="background-image: url(./static/images/EMS_Web.jpg); background-size: 250%; height: 250%;">
+                    <h1 class="title-text"><b>Emergency Medical Services </b></h1>
+                    <p class="title-sentence"><b>Explore Dataset Using Interactive Charts Below</b></p>
+                </div>
+            </div>
+            <button id="myButton">Start</button>
+            <div id="myDiv">
+                <p><h4>Play with our Charts!</h4></p>
+            </div>
+        </div>
+        <div class="container" style="background-color:lightskyblue">
+            <div class="row">
+        <div class="col-md-2">
+        <div class='tableauPlaceholder' id='viz1667929261647' style='position: relative'>
+            <noscript>
+                <a href='#'>
+                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;Final_Project7&#47;Story2&#47;1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                 <param name='embed_code_version' value='3' /> 
+                 <param name='site_root' value='' />
+                 <param name='name' value='Final_Project7&#47;Story2' />
+                 <param name='tabs' value='no' />
+                 <param name='toolbar' value='yes' />
+                 <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;Final_Project7&#47;Story2&#47;1.png' />
+                  <param name='animate_transition' value='yes' />
+                  <param name='display_static_image' value='yes' />
+                  <param name='display_spinner' value='yes' />
+                  <param name='display_overlay' value='yes' />
+                  <param name='display_count' value='yes' />
+                  <param name='language' value='en-US' />
+                  <param name='filter' value='publish=yes' />
+            </object>
+        </div>
+            <script type='text/javascript'>                    
+                var divElement = document.getElementById('viz1667929261647');                    
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                        vizElement.style.width='550px';
+                        vizElement.style.height='500px';
+                var scriptElement = document.createElement('script');                    
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>
+        <div class="col-md-offset-6">
+        <div class='tableauPlaceholder' id='viz1667932542763' style='position: relative'>
+            <noscript>
+                <a href='#'>
+                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;Final_Project7&#47;Story3&#47;1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                 <param name='embed_code_version' value='3' />
+                  <param name='site_root' value='' />
+                  <param name='name' value='Final_Project7&#47;Story3' />
+                  <param name='tabs' value='no' />
+                  <param name='toolbar' value='yes' />
+                  <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;Final_Project7&#47;Story3&#47;1.png' />
+                   <param name='animate_transition' value='yes' />
+                   <param name='display_static_image' value='yes' />
+                   <param name='display_spinner' value='yes' />
+                   <param name='display_overlay' value='yes' />
+                   <param name='display_count' value='yes' />
+                   <param name='language' value='en-US' />
+                   <param name='filter' value='publish=yes' />
+            </object>
+        </div>                
+        <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1667932542763');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+                vizElement.style.width='570px';
+                vizElement.style.height='500px';                    
+            var scriptElement = document.createElement('script');                    
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+        </div>
+    </div>
+</div>
+<div class="container" style="background-color:lightskyblue">
+        <div class ="row">
+            <div class="col-md-4">
+        <canvas id="myCanvas" width="490" height="500"></canvas>
+        <script src="./static/js/data.js"></script>
+            </div>
+            <div class="col-md-offset-6">
+                <img src="./static/images/impressionTop10.png" alt="impression" style="width: 570px; height: 500px;"/>
+
+                
+            </div>
+        
+            </div>
+        </div>
+        </div>
+</div>
+    <div id="maps" data-tab-content>        
+    <div class="container" style="background-color:rgba(35, 28, 169, 0.794)">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center" style="background-image: url(./static/images/EMS_Web.jpg); background-size: 250%; height: 250%;">
+                <h1 class="title-text"><b>Emergency Medical Services </b></h1>
+                <p class="title-sentence"><b>Explore Dataset Using Interactive Charts Below</b></p>
+            </div>
+        </div>
+        <div id="mapDiv">
+            <p><h4>Play with our Maps!</h4></p>
+        </div>
+    </div>
+        <div class="container" style="background-color:lightskyblue">
+        <div class="col-4">
+            <div class='tableauPlaceholder' id='viz1668638278099' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Presentation ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AP&#47;APOTvsHospitalvsImpressionvstime_16682083023210&#47;Presentation&#47;1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                     <param name='embed_code_version' value='3' />
+                      <param name='site_root' value='' />
+                     <param name='name' value='APOTvsHospitalvsImpressionvstime_16682083023210&#47;Presentation' />
+                     <param name='tabs' value='no' />
+                     <param name='toolbar' value='yes' />
+                     <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AP&#47;APOTvsHospitalvsImpressionvstime_16682083023210&#47;Presentation&#47;1.png' />
+                      <param name='animate_transition' value='yes' />
+                      <param name='display_static_image' value='yes' />
+                      <param name='display_spinner' value='yes' />
+                      <param name='display_overlay' value='yes' />
+                      <param name='display_count' value='yes' />
+                      <param name='language' value='en-US' />
+                      <param name='filter' value='publish=yes' />
+                    </object>
+                </div>
+                                <script type='text/javascript'>
+                                                    var divElement = document.getElementById('viz1668638278099');                    
+                                                    var vizElement = divElement.getElementsByTagName('object')[0];                    
+                                                    vizElement.style.width='900px';
+                                                    vizElement.style.height='927px';                    
+                                                    var scriptElement = document.createElement('script');                    
+                                                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                                                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                                </script>
+                 
+    </div> 
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

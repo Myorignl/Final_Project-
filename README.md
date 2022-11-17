@@ -176,7 +176,8 @@ The final features selected and their associated values are shown below:
 We relied heavily on the ability of the Balanced Random Forest Classifier model to quantify the impact of various datapoints on predicting our outcome/target. Each time we ran the model we were able to re-examine which datapoints were having the biggest impact and should be included in the dataset. The determination of what feature importances did not contribute much to the model's predictability, was found using the function: sorted(zip(rf_model.feature_importances, X.columns), reverse=True). The feature importances that resulted in values so low, that the values were basically zero, was a main indicator that most of the columns that were initially used in the model, was a possible reason why the accuracy scores were low. After dropped those columns, and re-running the model, the accuracy and F1 scores increased. 
 
 While the Balanced Random Forest Classifier model gave us a lot of insight into the feature importances of our data and proved to be invaluable because of that, it didn’t ultimately provide the best results. After more preprocessing and refining our data, the Gradient Boosting Classifier model provided the best results: 
-1. Accuracy score: 0.68
+
+1. Accuracy score: 0.69
 2. F1 Score (Predicted 0): 0.77
 3. F1 Score (Predicted 1): 0.50
 
@@ -227,17 +228,42 @@ We have worked with various sample sizes of our data through the preprocessing, 
 
 ### Description of current accuracy score  
 
-The accuracy score of the Gradient Boosting Classifier model is 0.68.   
+The accuracy score of the Gradient Boosting Classifier model is 0.69.
+The accuracy score of the Random Forest Classifier model is 0.66.
 
-### The results of the confusion matrix are below:  
+### The results of the Gradient Boosting Classifier results are shown below:  
 
-![confusionmatrix](https://user-images.githubusercontent.com/106631875/201450484-804a154f-0b5d-4c84-bb8d-d38c25142c3d.png)
+![GradientBoosterResults](https://github.com/Myorignl/Final_Project7/blob/main/Resources/GradientBoostingResults.png)
 
-### The feature importances are provided below:  
+Predicted 0 Benchmark=> 20.49 min or less
+Actual 0 Extreme=> 20.50 min or more 
+
+71914 - True Positive (how many model guessed correctly that it would be 20.49 min or less)
+12590 - False Positive (how many model thought it would be over 20.50 min but should have been predicted to be under)
+29928 - False Negative ( how many model guessed would under 20.49 but were actually over)
+21526 - True Negative ( how many model guessed would have apot time over 20.50 and was guessed correctly)
+
+### The results of the Random Forest Classifier results are shown below:
+
+![RForestClassifier](https://github.com/Myorignl/Final_Project7/blob/main/Resources/RandomForestResults.png)
+
+Predicted 0 Benchmark=> 20.49 min or less
+Actual 0 Extreme=> 20.50 min or more 
+
+65761 - True Positive (how many model guessed correctly that it would be 20.49 min or less)
+18135 - False Positive (how many model thought it would be over 20.50 min but should have been predicted to be under)
+28213 - False Negative ( how many model guessed would under 20.49 but were actually over)
+23849 - True Negative ( how many model guessed would have apot time over 20.50 and was guessed correctly)
+
+### The feature importances from the Gradient Booster Model are provided below:  
 
 ![feature_importances](https://user-images.githubusercontent.com/106631875/201450494-2b94ea00-e589-43d2-9d50-2cf2eaf250bd.png)
 
 The feature importances seem to focus mainly on the hospital_num (=0.617) and arrival_hour (=0.225).   
+
+### Model Interpretation of Results
+
+Both models were good but the gradient boosting model was just a little bit higher as you can see. This was probably due to the fact that the gradient boosting model has the ability to show different learning rates and testing validation rates, in which we were able to adjust the learning rate to the value that provided the highest training and testing value. We chose a learning rate of 0.75.
   
 ### How the model addresses the question or problem the team is solving.  
 

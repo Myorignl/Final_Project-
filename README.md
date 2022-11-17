@@ -236,11 +236,15 @@ The accuracy score of the Random Forest Classifier model is 0.66.
 ![GradientBoosterResults](https://github.com/Myorignl/Final_Project7/blob/main/Resources/GradientBoostingResults.png)
 
 Predicted 0 Benchmark=> 20.49 min or less
+
 Actual 0 Extreme=> 20.50 min or more 
 
 71914 - True Positive (how many model guessed correctly that it would be 20.49 min or less)
+
 12590 - False Positive (how many model thought it would be over 20.50 min but should have been predicted to be under)
+
 29928 - False Negative ( how many model guessed would under 20.49 but were actually over)
+
 21526 - True Negative ( how many model guessed would have apot time over 20.50 and was guessed correctly)
 
 ### The results of the Random Forest Classifier results are shown below:
@@ -248,11 +252,15 @@ Actual 0 Extreme=> 20.50 min or more
 ![RForestClassifier](https://github.com/Myorignl/Final_Project7/blob/main/Resources/RandomForestResults.png)
 
 Predicted 0 Benchmark=> 20.49 min or less
+
 Actual 0 Extreme=> 20.50 min or more 
 
 65761 - True Positive (how many model guessed correctly that it would be 20.49 min or less)
+
 18135 - False Positive (how many model thought it would be over 20.50 min but should have been predicted to be under)
+
 28213 - False Negative ( how many model guessed would under 20.49 but were actually over)
+
 23849 - True Negative ( how many model guessed would have apot time over 20.50 and was guessed correctly)
 
 ### The feature importances from the Gradient Booster Model are provided below:  

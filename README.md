@@ -90,7 +90,7 @@ The interactive dashboard was created using HTML and Javascript, and Tableau. Th
   * Confusion Matrix Table 
   * Machine Learning Model Results Table: Accuracy Score, F1 Score, Ranking Importance of Features
   
-![EMS Home Page](https://github.com/Myorignl/Final_Project7/blob/Bethany/EMS_JavaScript_Bethany/new_webpage_designPG1_bethany.png)
+![EMS Home Page](https://github.com/Myorignl/Final_Project7/blob/main/static/images/final_look_webPg1.png)
 
 ![EMS Maps Tab Page](https://github.com/Myorignl/Final_Project7/blob/Bethany/EMS_JavaScript_Bethany/new_designPG2_bethany.png)
 
